@@ -1,0 +1,3054 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BJMT</name>
+    </assembly>
+    <members>
+        <member name="T:BJMT.Utility.StringUtility">
+            <summary>
+            String utility methods.
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.StringUtility.IsNumber(System.String,System.Int32@)">
+            <summary>
+            判断指定的字符串是否为数值
+            </summary>
+            <param name="message">待判断的字符串</param>
+            <param name="result">返回结果</param>
+            <returns>true表示为数值，false表示不是数值。</returns>
+        </member>
+        <member name="M:BJMT.Utility.StringUtility.Join``1(System.String,System.Collections.Generic.ICollection{``0})">
+            <summary>
+            Concatenates a specified separator String between each element of a specified collection, 
+            yielding a single concatenated string. 
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.StringUtility.Join``1(System.String,System.Collections.Generic.ICollection{``0},System.Converter{``0,System.String})">
+            <summary>
+            Concatenates a specified separator String between each converted element of a specified collection, 
+            yielding a single concatenated string. 
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.StringUtility.Join``1(System.String,``0[])">
+            <summary>
+            Concatenates a specified separator String between each element of a specified array, 
+            yielding a single concatenated string. 
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.StringUtility.Join``1(System.String,``0[],System.Converter{``0,System.String})">
+            <summary>
+            Concatenates a specified separator String between each converted element of a specified array, 
+            yielding a single concatenated string. 
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.StringUtility.DefaultConversion``1(``0)">
+            <summary>
+            
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BJMT.Utility.EnumUtility">
+            <summary>
+            枚举工具类
+            </summary>
+        </member>
+        <member name="F:BJMT.Utility.EnumUtility.EnumName">
+            <summary>
+            枚举详细表DataTable中的名称列名
+            </summary>
+        </member>
+        <member name="F:BJMT.Utility.EnumUtility.EnumValue">
+            <summary>
+            枚举详细表DataTable中的值列名
+            </summary>
+        </member>
+        <member name="F:BJMT.Utility.EnumUtility.EnumDes">
+            <summary>
+            枚举详细表DataTable中的描述信息列名
+            </summary>
+        </member>
+        <member name="F:BJMT.Utility.EnumUtility.EmptyFieldDescriptor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.EnumUtility.CreateDescriptor(System.String,System.UInt64,System.String)">
+            <summary>
+            创建一个IEnumFieldDescriptor接口。
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="description"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Utility.EnumUtility.GetEnumDescriptor``1">
+            <summary>
+            获得枚举元数据
+            </summary>
+            <typeparam name="TEnum"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Utility.EnumUtility.GetEnumDescriptor(System.Type)">
+            <summary>
+            获得枚举元数据
+            </summary>
+            <param name="enumType">枚举的类型。</param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Utility.EnumUtility.GetEnumDescription(System.Type,System.UInt64)">
+            <summary>
+            获得枚举描述
+            </summary>
+            <param name="enumType">枚举类型</param>
+            <param name="value">枚举值</param>
+            <returns>返回枚举项描述</returns>
+        </member>
+        <member name="M:BJMT.Utility.EnumUtility.GetDescription``1(``0)">
+            <summary>
+            获取枚举描述
+            </summary>
+            <param name="enumValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Utility.EnumUtility.GetDescriptions``1">
+            <summary>
+            获得指定枚举的所有描述信息。
+            </summary>
+            <typeparam name="T">一个枚举类型。</typeparam>
+            <returns>返回枚举项描述</returns>
+        </member>
+        <member name="M:BJMT.Utility.EnumUtility.GetValue``1(System.String)">
+            <summary>
+            根据一个枚举值的描述信息返回相应的枚举值。
+            </summary>
+            <typeparam name="TEnum">一个枚举类型。</typeparam>
+            <param name="description">枚举值的描述信息</param>
+            <returns>枚举值</returns>
+        </member>
+        <member name="M:BJMT.Utility.EnumUtility.GetEnumDetailed(System.Type)">
+            <summary>
+            获取指定枚举类型的详细信息
+            </summary>
+            <param name="enumType">枚举类型</param>
+            <returns>包含类型类型的数据表对象，此数据表包括三列，分别为EnumUtility.EnumName,EnumUtility.EnumValue,EnumUtility.EnumDes，
+            即枚举的名称，枚举的整型值以及枚举值的描述信息。</returns>
+        </member>
+        <member name="M:BJMT.Utility.EnumUtility.GetDetailed``1">
+            <summary>
+            获取指定枚举类型的详细信息
+            </summary>
+            <typeparam name="T">一个枚举类型。</typeparam>
+            <returns>包含类型类型的数据表对象，此数据表包括三列，分别为EnumUtility.EnumName,EnumUtility.EnumValue,EnumUtility.EnumDes，
+            即枚举的名称，枚举的整型值以及枚举值的描述信息。</returns>
+        </member>
+        <member name="T:BJMT.Utility.EnumUtility.IEnumDescriptor">
+            <summary>
+            枚举元数据接口定义
+            </summary>
+        </member>
+        <member name="P:BJMT.Utility.EnumUtility.IEnumDescriptor.IsFlagEnum">
+            <summary>
+            是否标记枚举
+            </summary>
+        </member>
+        <member name="P:BJMT.Utility.EnumUtility.IEnumDescriptor.Fields">
+            <summary>
+            枚举字段列表
+            </summary>
+        </member>
+        <member name="T:BJMT.Utility.EnumUtility.IEnumFieldDescriptor">
+            <summary>
+            枚举字段元数据定义
+            </summary>
+        </member>
+        <member name="P:BJMT.Utility.EnumUtility.IEnumFieldDescriptor.Name">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:BJMT.Utility.EnumUtility.IEnumFieldDescriptor.Value">
+            <summary>
+            字段值
+            </summary>
+        </member>
+        <member name="P:BJMT.Utility.EnumUtility.IEnumFieldDescriptor.Description">
+            <summary>
+            字段描述
+            </summary>
+        </member>
+        <member name="T:BJMT.Utility.EnumUtility.EnumFieldDescriptor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.EnumUtility.EnumFieldDescriptor.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.EnumUtility.EnumFieldDescriptor.#ctor(System.String,System.UInt64,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="description"></param>
+        </member>
+        <member name="P:BJMT.Utility.EnumUtility.EnumFieldDescriptor.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BJMT.Utility.EnumUtility.EnumFieldDescriptor.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BJMT.Utility.EnumUtility.EnumFieldDescriptor.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BJMT.Threading.ActiveObject.IActiveTask">
+            <summary>
+            主动任务接口
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.IActiveTask.Execute">
+            <summary>
+            执行主动任务
+            </summary>
+        </member>
+        <member name="T:BJMT.EventArgs`1">
+            <summary>
+            泛型事件参数类
+            </summary>
+        </member>
+        <member name="M:BJMT.EventArgs`1.#ctor(`0)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:BJMT.EventArgs`1.Data">
+            <summary>
+            得到或设置事件数据
+            </summary>
+        </member>
+        <member name="T:BJMT.Win32API.SystemTime">
+            <summary>
+            Specifies a date and time, in coordinated universal time (UTC), 
+            using individual members for the month, day, year, weekday, hour, 
+            minute, second, and millisecond.
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.SystemTime.wYear">
+            <summary>
+            The year. The valid values for this member are 1601 through 30827.
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.SystemTime.wMonth">
+            <summary>
+            The month. This member can be one of the following values.
+            Value Meaning 
+            1 January
+            2 February
+            3 March
+            4 April
+            5 May
+            6 June
+            7 July
+            8 August
+            9 September
+            10 October
+            11 November
+            12 December
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.SystemTime.wDayOfWeek">
+            <summary>
+            The day of the week. This member can be one of the following values. 
+            Value Meaning 
+            0 Sunday
+            1 Monday
+            2 Tuesday
+            3 Wednesday
+            4 Thursday
+            5 Friday
+            6 Saturday
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.SystemTime.wDay">
+            <summary>
+            The day of the month. The valid values for this member are 1 through 31.
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.SystemTime.wHour">
+            <summary>
+            The hour. The valid values for this member are 0 through 23.
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.SystemTime.wMinute">
+            <summary>
+            The minute. The valid values for this member are 0 through 59.
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.SystemTime.wSecond">
+            <summary>
+            The second. The valid values for this member are 0 through 59
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.SystemTime.wMiliseconds">
+            <summary>
+            The millisecond. The valid values for this member are 0 through 999.
+            </summary>
+        </member>
+        <member name="T:BJMT.Win32API.Kernel32">
+            <summary>
+            Kernel32 API
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.Kernel32.INFINITE">
+            <summary>
+            Infinite timeout
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.Kernel32.STATUS_WAIT_0">
+            <summary>
+            STATUS_WAIT_0
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.Kernel32.WAIT_OBJECT_0">
+            <summary>
+            WAIT_OBJECT_0
+            </summary>
+        </member>
+        <member name="M:BJMT.Win32API.Kernel32.CloseHandle(System.Int32)">
+            <summary>
+            Closes an open object handle.
+            </summary>
+            <param name="hObject">A valid handle to an open object</param>
+            <returns>If the function succeeds, the return value is nonzero.
+            If the function fails, the return value is zero. To get extended error information, call GetLastError.
+            If the application is running under a debugger, the function will throw an exception if it receives either 
+            a handle value that is not valid or a pseudo-handle value. This can happen if you close a handle twice, or 
+            if you call CloseHandle on a handle returned by the FindFirstFile function.
+            </returns>
+        </member>
+        <member name="M:BJMT.Win32API.Kernel32.CreateSemaphore(System.IntPtr,System.Int32,System.Int32,System.String)">
+            <summary>
+            Creates or opens a named or unnamed semaphore object.
+            </summary>
+            <param name="lpSemaphoreAttributes">A pointer to a SECURITY_ATTRIBUTES structure. 
+            If this parameter is NULL, the handle cannot be inherited by child processes.
+            </param>
+            <param name="lInitialCount">The initial count for the semaphore object. 
+            This value must be greater than or equal to zero and less than or equal 
+            to lMaximumCount.</param>
+            <param name="lMaximumCount">The maximum count for the semaphore object. This value must be greater than zero.</param>
+            <param name="lpName">The name of the semaphore object. The name is limited to MAX_PATH characters. Name comparison is case sensitive</param>
+            <returns>If the function succeeds, the return value is a handle to the semaphore object. 
+            If the named semaphore object existed before the function call, the function returns 
+            a handle to the existing object and GetLastError returns ERROR_ALREADY_EXISTS.</returns>
+        </member>
+        <member name="M:BJMT.Win32API.Kernel32.ReleaseSemaphore(System.Int32,System.Int32,System.IntPtr)">
+            <summary>
+            Increases the count of the specified semaphore object by a specified amount.(see MSDN for detailed)
+            </summary>
+            <param name="hSemaphore">see MSDN for detailed</param>
+            <param name="lReleaseCount"></param>
+            <param name="lpPreviousCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Win32API.Kernel32.CreateEvent(System.IntPtr,System.Boolean,System.Boolean,System.IntPtr)">
+            <summary>
+            Creates or opens a named or unnamed event object.(see MSDN for detailed)
+            </summary>
+            <param name="lpEventAttributes">A pointer to a SECURITY_ATTRIBUTES structure. If this parameter is NULL, 
+            the handle cannot be inherited by child processes. </param>
+            <param name="bManualReset">If this parameter is TRUE, the function creates a manual-reset event object,
+            which requires the use of the ResetEvent function to set the event state to nonsignaled. If this parameter 
+            is FALSE, the function creates an auto-reset event object, and system automatically resets the event state 
+            to nonsignaled after a single waiting thread has been released. </param>
+            <param name="bInitialState">If this parameter is TRUE, the initial state of the event object is signaled; otherwise, it is nonsignaled. </param>
+            <param name="lpName">The name of the event object. The name is limited to MAX_PATH characters. Name comparison is case sensitive. </param>
+            <returns>If the function succeeds, the return value is a handle to the event object. If the named event object existed before the 
+            function call, the function returns a handle to the existing object and GetLastError returns ERROR_ALREADY_EXISTS. 
+            If the function fails, the return value is NULL. To get extended error information, call GetLastError. </returns>
+        </member>
+        <member name="M:BJMT.Win32API.Kernel32.SetEvent(System.Int32)">
+            <summary>
+            Sets the specified event object to the signaled state
+            </summary>
+            <param name="hEvent">A handle to the event object. The CreateEvent or OpenEvent function returns this handle. 
+            The handle must have the EVENT_MODIFY_STATE access right. For more information, see MSDN</param>
+            <returns>see MSDN for detailed</returns>
+        </member>
+        <member name="M:BJMT.Win32API.Kernel32.ResetEvent(System.Int32)">
+            <summary>
+            Sets the specified event object to the nonsignaled state(see MSDN for detailed)
+            </summary>
+            <param name="hEvent">A handle to the event object. 
+            The CreateEvent or OpenEvent function returns this handle.</param>
+            <returns>If the function succeeds, the return value is nonzero.
+            If the function fails, the return value is zero. To get extended error information, call GetLastError.
+            </returns>
+        </member>
+        <member name="M:BJMT.Win32API.Kernel32.WaitForSingleObject(System.Int32,System.UInt32)">
+            <summary>
+            Waits until the specified object is in the signaled state or the time-out interval elapses(see MSDN for detailed)
+            </summary>
+            <param name="hHandle">A handle to the object. For a list of the object types whose handles can be specified, 
+            see the following Remarks section. If this handle is closed while the wait is still pending, the function's
+            behavior is undefined.The handle must have the SYNCHRONIZE access right. For more information, see MSDN</param>
+            <param name="dwMilliseconds">The time-out interval, in milliseconds. The function returns if the interval
+            elapses, even if the object's state is nonsignaled. If dwMilliseconds is zero, the function tests the 
+            object's state and returns immediately. If dwMilliseconds is INFINITE, the function's time-out interval never elapses.</param>
+            <returns>If the function succeeds, the return value indicates the event that caused the function to return.see MSDN for detailed</returns>
+        </member>
+        <member name="M:BJMT.Win32API.Kernel32.WaitForMultipleObjects(System.UInt32,System.Int32[],System.Boolean,System.UInt32)">
+            <summary>
+            Waits until one or all of the specified objects are in the signaled state or the time-out interval elapses(see MSDN for detailed)
+            </summary>
+            <param name="nCount">The number of object handles in the array pointed to by lpHandles. 
+            The maximum number of object handles is MAXIMUM_WAIT_OBJECTS.</param>
+            <param name="lpHandles">An array of object handles. For a list of the object types whose handles 
+            can be specified, see the following Remarks section. The array can contain handles to objects of 
+            different types. It may not contain the multiple copies of the same handle. If one of these handles 
+            is closed while the wait is still pending, the function's behavior is undefined. The handles must 
+            have the SYNCHRONIZE access right. For more information, see MSDN.</param>
+            <param name="bWaitAll">If this parameter is TRUE, the function returns when the state of all objects 
+            in the lpHandles array is signaled. If FALSE, the function returns when the state of any one of the 
+            objects is set to signaled. In the latter case, the return value indicates the object whose state caused
+            the function to return.</param>
+            <param name="dwMilliseconds">The time-out interval, in milliseconds. The function returns if the interval 
+            elapses, even if the conditions specified by the bWaitAll parameter are not met. If dwMilliseconds is zero, 
+            the function tests the states of the specified objects and returns immediately. If dwMilliseconds is INFINITE, 
+            the function's time-out interval never elapses.</param>
+            <returns>If the function succeeds, the return value indicates the event that caused the function to return. 
+            For more information,see MSDN for detailed</returns>
+        </member>
+        <member name="M:BJMT.Win32API.Kernel32.LoadLibrary(System.String)">
+            <summary>
+            Maps the specified executable module into the address space of the calling process.
+            For additional load options, use the LoadLibraryEx function.
+            </summary>
+            <param name="lpFileName">The name of the executable module (either a .dll or .exe or .ocx file). </param>
+            <returns>If the function succeeds, the return value is a handle to the module.</returns>
+        </member>
+        <member name="M:BJMT.Win32API.Kernel32.GetProcAddress(System.IntPtr,System.String)">
+            <summary>
+            Retrieves the address of an exported function or variable from the specified dynamic-link library (DLL).
+            </summary>
+            <param name="hModule">A handle to the DLL module that contains the function or variable. </param>
+            <param name="lpProcName">The function or variable name, or the function's ordinal value. </param>
+            <returns>
+            If the function succeeds, the return value is the address of the exported function or variable.
+            If the function fails, the return value is NULL. To get extended error information, call GetLastError.
+            </returns>
+        </member>
+        <member name="M:BJMT.Win32API.Kernel32.FreeLibrary(System.IntPtr)">
+            <summary>
+            Decrements the reference count of the loaded dynamic-link library (DLL). When the reference count 
+            reaches zero, the module is unmapped from the address space of the calling process and the handle 
+            is no longer valid.
+            </summary>
+            <param name="hModule">A handle to the loaded DLL module. 
+            The LoadLibrary or GetModuleHandle function returns this handle.</param>
+            <returns>If the function succeeds, the return value is nonzero.
+            If the function fails, the return value is zero. To get extended error information, call GetLastError.
+            </returns>
+        </member>
+        <member name="M:BJMT.Win32API.Kernel32.GetLastError">
+            <summary>
+            Retrieves the calling thread's last-error code value. 
+            </summary>
+            <returns>The return value is the calling thread's last-error code.</returns>
+        </member>
+        <member name="M:BJMT.Win32API.Kernel32.SetSystemTime(BJMT.Win32API.SystemTime@)">
+            <summary>
+            Sets the current system time and date. 
+            The system time is expressed in Coordinated Universal Time (UTC).
+            </summary>
+            <param name="sysTime">A pointer to a SYSTEMTIME structure that contains the new system date and time. 
+            </param>
+            <returns>If the function succeeds, the return value is nonzero.
+            If the function fails, the return value is zero. To get extended error information, call GetLastError.
+            </returns>
+        </member>
+        <member name="M:BJMT.Win32API.Kernel32.GetSystemTime(BJMT.Win32API.SystemTime@)">
+            <summary>
+            Retrieves the current system date and time. The system time is expressed in Coordinated Universal Time (UTC).
+            </summary>
+            <param name="sysTime">A pointer to a SYSTEMTIME structure to receive the current system date and time. 
+            The lpSystemTime parameter must not be NULL. Using NULL will result in an access violation.
+            </param>
+        </member>
+        <member name="T:BJMT.BooleanDisposable">
+            <summary>
+            拥有释放标价的释放基类
+            </summary>
+        </member>
+        <member name="T:BJMT.IBooleanDisposable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BJMT.IBooleanDisposable.IsDisposed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BJMT.BooleanDisposable.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:BJMT.BooleanDisposable.Dispose">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:BJMT.BooleanDisposable.Dispose(System.Boolean)">
+             <summary>
+            
+             </summary>
+             <param name="disposing"></param>
+        </member>
+        <member name="M:BJMT.BooleanDisposable.CheckNotDisposed">
+            <summary>
+            检查对象是否还没有被释放
+            </summary>
+            <exception cref="T:System.ObjectDisposedException">如果对象已经释放则触发该异常</exception>
+        </member>
+        <member name="P:BJMT.BooleanDisposable.IsDisposed">
+            <summary>
+            判断当前对象是否释放
+            </summary>
+        </member>
+        <member name="T:BJMT.Utility.AppUtility">
+            <summary>
+            应用程序实用工具
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.AppUtility.IsOneInstance">
+            <summary>
+            判断当前的应用程序是否为一个实例
+            </summary>
+            <returns>返回true表示一个实例</returns>
+        </member>
+        <member name="T:BJMT.Mapping.IMapperManager">
+            <summary>
+            类型映射器接口
+            </summary>
+        </member>
+        <member name="M:BJMT.Mapping.IMapperManager.Map(System.Object,System.Type)">
+             <summary>
+            类型映射转换
+             </summary>
+             <param name="from"></param>
+             <param name="toType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapping.IMapperManager.Map``2(``0)">
+             <summary>
+            类型映射转换
+             </summary>
+             <param name="from"></param>
+             <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapping.IMapperManager.Map``2(``0,``1@)">
+             <summary>
+            类型映射转换
+             </summary>
+             <param name="from"></param>
+             <param name="to"></param>
+        </member>
+        <member name="M:BJMT.Mapping.IMapperManager.CreateMapper``2">
+            <summary>
+            创建映射器
+            </summary>
+            <typeparam name="TFrom"></typeparam>
+            <typeparam name="TTo"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:BJMT.Win32API.COPYDATASTRUCT">
+            <summary>
+            The COPYDATASTRUCT structure contains data to be passed to another application by the WM_COPYDATA message. 
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.COPYDATASTRUCT.dwData">
+            <summary>
+            Specifies data to be passed to the receiving application.
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.COPYDATASTRUCT._cbData">
+            <summary>
+            Specifies the size, in bytes, of the data pointed to by the lpData member. 
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.COPYDATASTRUCT._lpData">
+            <summary>
+            Pointer to data to be passed to the receiving application. This member can be NULL.
+            </summary>
+        </member>
+        <member name="P:BJMT.Win32API.COPYDATASTRUCT.cbData">
+            <summary>
+            Get the cbData.
+            </summary>
+        </member>
+        <member name="P:BJMT.Win32API.COPYDATASTRUCT.lpData">
+            <summary>
+            Get/Set the lpData.
+            </summary>
+        </member>
+        <member name="T:BJMT.Win32API.User32">
+            <summary>
+            Wrapper for User32.dll API
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.User32.WM_COPYDATA">
+            <summary>
+            An application sends the WM_COPYDATA message to pass data to another application.
+            </summary>
+        </member>
+        <member name="M:BJMT.Win32API.User32.SendMessage(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            The SendMessage function sends the specified message to a window or windows. 
+            It calls the window procedure for the specified window and does not return 
+            until the window procedure has processed the message. 
+            </summary>
+            <param name="hWnd">[in] Handle to the window whose window procedure will receive 
+            the message. If this parameter is HWND_BROADCAST, the message is sent to all 
+            top-level windows in the system, including disabled or invisible unowned windows, 
+            overlapped windows, and pop-up windows; but the message is not sent to child windows.</param>
+            <param name="Msg">[in] Specifies the message to be sent.</param>
+            <param name="wParam">[in] Specifies additional message-specific information.</param>
+            <param name="lParam">[in] Specifies additional message-specific information.</param>
+            <returns>The return value specifies the result of the message processing; it depends on the message sent.</returns>
+        </member>
+        <member name="M:BJMT.Win32API.User32.SendCopyDataMessage(System.Int32,System.Int32,System.Int32,BJMT.Win32API.COPYDATASTRUCT@)">
+            <summary>
+            The SendMessage function sends the specified message to a window or windows. 
+            It calls the window procedure for the specified window and does not return 
+            until the window procedure has processed the message. 
+            </summary>
+            <param name="hWnd">[in] Handle to the window whose window procedure will receive 
+            the message. If this parameter is HWND_BROADCAST, the message is sent to all 
+            top-level windows in the system, including disabled or invisible unowned windows, 
+            overlapped windows, and pop-up windows; but the message is not sent to child windows.</param>
+            <param name="Msg">[in] Specifies the message to be sent.</param>
+            <param name="wParam">[in] Specifies additional message-specific information.</param>
+            <param name="lParam">[in] Specifies additional COPYDATASTRUCT information.</param>
+            <returns>The return value specifies the result of the message processing; it depends on the message sent.</returns>
+        </member>
+        <member name="M:BJMT.Win32API.User32.PostMessage(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            The SendMessage function sends the specified message to a window or windows. 
+            It calls the window procedure for the specified window and does not return 
+            until the window procedure has processed the message. 
+            </summary>
+            <param name="hWnd">[in] Handle to the window whose window procedure will receive 
+            the message. If this parameter is HWND_BROADCAST, the message is sent to all 
+            top-level windows in the system, including disabled or invisible unowned windows, 
+            overlapped windows, and pop-up windows; but the message is not sent to child windows.</param>
+            <param name="Msg">[in] Specifies the message to be sent.</param>
+            <param name="wParam">[in] Specifies additional message-specific information.</param>
+            <param name="lParam">[in] Specifies additional message-specific information.</param>
+            <returns>The return value specifies the result of the message processing; it depends on the message sent.</returns>
+        </member>
+        <member name="T:BJMT.IO.WinIniFile">
+            <summary>
+            Windows标准配置文件（INI文件）读写类
+            </summary>
+        </member>
+        <member name="F:BJMT.IO.WinIniFile._iniFileName">
+            <summary>
+            Ini文件名
+            </summary>
+        </member>
+        <member name="M:BJMT.IO.WinIniFile.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="FileName">文件名称</param>
+        </member>
+        <member name="M:BJMT.IO.WinIniFile.WriteValue(System.String,System.String,System.String)">
+            <summary>
+            写入INI文件
+            </summary>
+            <param name="Section">项目名称(如 [TypeName] )</param>
+            <param name="Key">键</param>
+            <param name="Value">值</param>
+        </member>
+        <member name="M:BJMT.IO.WinIniFile.ReadValue(System.String,System.String,System.String)">
+            <summary>
+            读出INI文件
+            </summary>
+            <param name="Section">项目名称(如 [TypeName] )</param>
+            <param name="Key">键</param>
+            <param name="Default">默认值</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:BJMT.IO.WinIniFile.ExistINIFile">
+            <summary>
+            验证文件是否存在
+            </summary>
+            <returns>布尔值</returns>
+        </member>
+        <member name="M:BJMT.IO.WinIniFile.NewDirectory(System.String)">
+            <summary>
+            创建文件夹
+            </summary>
+            <param name="path">路径</param>
+        </member>
+        <member name="M:BJMT.IO.WinIniFile.AddNotes(System.String)">
+            <summary>
+            添加一行注释
+            </summary>
+            <param name="Notes">注释</param>
+        </member>
+        <member name="M:BJMT.IO.WinIniFile.AddText(System.String)">
+            <summary>
+            添加一行文本
+            </summary>
+            <param name="Text">文本</param>
+        </member>
+        <member name="M:BJMT.IO.WinIniFile.WriteValue(System.String,System.String,System.Int32)">
+            <summary>
+            写入INI文件
+            </summary>
+            <param name="Section">项目名称</param>
+            <param name="Key">键值</param>
+            <param name="Value">写入值</param>
+        </member>
+        <member name="M:BJMT.IO.WinIniFile.WriteValue(System.String,System.String,System.Boolean)">
+            <summary>
+            写入INI文件
+            </summary>
+            <param name="Section">项目名称</param>
+            <param name="Key">键值</param>
+            <param name="Value">写入值</param>
+        </member>
+        <member name="M:BJMT.IO.WinIniFile.WriteValue(System.String,System.String,System.DateTime)">
+            <summary>
+            写入INI文件
+            </summary>
+            <param name="Section">项目名称</param>
+            <param name="Key">键值</param>
+            <param name="Value">写入值</param>
+        </member>
+        <member name="M:BJMT.IO.WinIniFile.WriteValue(System.String,System.String,System.Object)">
+            <summary>
+            写入INI文件
+            </summary>
+            <param name="Section">项目名称</param>
+            <param name="Key">键值</param>
+            <param name="Value">写入值</param>
+        </member>
+        <member name="M:BJMT.IO.WinIniFile.ReadValue(System.String,System.String,System.Int32)">
+            <summary>
+            读数据
+            </summary>
+            <param name="Section">项目名称</param>
+            <param name="Key">键值</param>
+            <param name="Default">默认值</param>
+            <returns>整型值</returns>
+        </member>
+        <member name="M:BJMT.IO.WinIniFile.ReadValue(System.String,System.String,System.Boolean)">
+            <summary>
+            读出INI文件
+            </summary>
+            <param name="Section">项目名称</param>
+            <param name="Key">键值</param>
+            <param name="Default">默认值</param>
+            <returns>bool值</returns>
+        </member>
+        <member name="M:BJMT.IO.WinIniFile.ReadValue(System.String,System.String,System.DateTime)">
+            <summary>
+            读出INI文件
+            </summary>
+            <param name="Section">项目名称</param>
+            <param name="Key">键值</param>
+            <param name="Default">默认值</param>
+            <returns>时间值</returns>
+        </member>
+        <member name="M:BJMT.IO.WinIniFile.ReadValue(System.String,System.String)">
+            <summary>
+            读出INI文件
+            </summary>
+            <param name="Section">项目名称</param>
+            <param name="Key">键值</param>
+            <returns>读取的值</returns>
+        </member>
+        <member name="P:BJMT.IO.WinIniFile.FileName">
+            <summary>
+            属性-文件名
+            </summary>
+        </member>
+        <member name="T:BJMT.IO.IoUtility">
+            <summary>
+            常用的IO实用工具类
+            </summary>
+        </member>
+        <member name="M:BJMT.IO.IoUtility.DeleteExpiredFile(System.String,System.Int32)">
+            <summary>
+            删除某一个过期的文件。
+            </summary>
+            <param name="fileName">指定的文件</param>
+            <param name="expiredDays">过期天数</param>
+        </member>
+        <member name="M:BJMT.IO.IoUtility.DeleteExpiredFiles(System.String,System.Int32)">
+            <summary>
+            删除指定目录下所有过期的文件。
+            </summary>
+            <param name="filePath">要搜索的文件所在的路径</param>
+            <param name="expiredDays">过期天数</param>
+        </member>
+        <member name="M:BJMT.IO.IoUtility.DeleteExpiredDirectory(System.String,System.String,System.Int32)">
+            <summary>
+            删除过期的目录及其子目录和文件。
+            </summary>
+            <param name="path">要搜索的路径。</param>
+            <param name="searchPattern">要与 path 中的文件名匹配的搜索字符串。</param>
+            <param name="expiredDays">过期天数</param>
+        </member>
+        <member name="T:BJMT.IDisposeCollector">
+            <summary>
+            资源回收器接口
+            </summary>
+        </member>
+        <member name="P:BJMT.IDisposeCollector.Disposes">
+            <summary>
+            可回收的资源列表
+            </summary>
+        </member>
+        <member name="T:BJMT.Serialization.ISerializer">
+            <summary>
+            序列化器
+            </summary>
+        </member>
+        <member name="M:BJMT.Serialization.ISerializer.Serialize(System.Object)">
+            <summary>
+            把对象序列化成字节数组
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Serialization.ISerializer.Deserialize(System.Byte[],System.Type)">
+            <summary>
+            从字节数组中反序列化指定的类型对象
+            </summary>
+            <param name="buffer"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Serialization.ISerializer.Serialize(System.IO.Stream,System.Object)">
+            <summary>
+            把对象序列化到字节流
+            </summary>
+            <param name="serializationStream"></param>
+            <param name="graph"></param>
+        </member>
+        <member name="M:BJMT.Serialization.ISerializer.Deserialize(System.IO.Stream,System.Type)">
+            <summary>
+            从字节流中反序列化指定的类型对象
+            </summary>
+            <param name="serializationStream"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BJMT.Guard">
+            <summary>
+            失效断言工具类
+            </summary>
+        </member>
+        <member name="M:BJMT.Guard.NotNull(System.Object,System.String)">
+            <summary>
+            断言指定的参数不能为null值
+            </summary>
+            <param name="argumentValue">参数的值</param>
+            <param name="argumentName">参数的名称</param>
+        </member>
+        <member name="M:BJMT.Guard.NotNullOrEmpty(System.String,System.String)">
+            <summary>
+            断言指定的字符串不能为空字符串或null值。
+            </summary>
+            <param name="argumentValue"></param>
+            <param name="argumentName"></param>
+        </member>
+        <member name="T:BJMT.IO.IniFile">
+            <summary>
+            INI文件操作类
+            </summary>  
+        </member>
+        <member name="F:BJMT.IO.IniFile._filePath">
+            <summary>
+            文件全路径(含文件名)
+            </summary>
+        </member>
+        <member name="M:BJMT.IO.IniFile.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="iniPath">文件全路径(含文件名)</param>
+        </member>
+        <member name="M:BJMT.IO.IniFile.WriteString(System.String,System.String,System.String)">
+            <summary>
+            将字符串数据写入INI文件
+            </summary>
+            <param name="section">段值</param>
+            <param name="Key">键值</param>
+            <param name="Value">要写入的字符串</param>
+        </member>
+        <member name="M:BJMT.IO.IniFile.ReadString(System.String,System.String)">
+            <summary>
+            从INI文件中读取数据(字符串型)
+            </summary>
+            <param name="section">段值</param>
+            <param name="Key">键值</param>
+            <returns>数据</returns>
+        </member>
+        <member name="M:BJMT.IO.IniFile.ReadInt(System.String,System.String)">
+            <summary>
+             从INI文件中读取数据(整型)
+            </summary>
+            <param name="section">段值</param>
+            <param name="Key">键值</param>
+            <returns>数据</returns>
+        </member>
+        <member name="T:BJMT.ExceptionManager">
+            <summary>
+            异常管理器
+            </summary>
+        </member>
+        <member name="F:BJMT.ExceptionManager.ExceptionHandler">
+            <summary>
+            异常处理器
+            </summary>
+        </member>
+        <member name="F:BJMT.ExceptionManager.LastException">
+            <summary>
+            最后一次成功处理的异常
+            </summary>
+        </member>
+        <member name="M:BJMT.ExceptionManager.Init(BJMT.Exceptions.IExceptionResolver[],BJMT.Exceptions.IExceptionRender[])">
+             <summary>
+             设置异常处理器
+             </summary>
+            <param name="resolvers">异常解析器集合</param>
+            <param name="renders">异常呈现器集合</param>
+        </member>
+        <member name="M:BJMT.ExceptionManager.Handle(System.Exception,System.String)">
+            <summary>
+            处理指定的异常
+            </summary>
+            <param name="ex">将要被处理的异常对象</param>
+            <param name="customInformation">自定义异常消息</param>
+        </member>
+        <member name="T:BJMT.Win32API.Ole32">
+            <summary>
+            对Ole32.lib进行封装
+            </summary>
+        </member>
+        <member name="M:BJMT.Win32API.Ole32.OleInitialize(System.IntPtr)">
+            <summary>
+            Initializes the COM library on the current apartment, identifies the concurrency 
+            model as single-thread apartment (STA), and enables additional functionality described 
+            in the Remarks section below. Applications must initialize the COM library before they 
+            can call COM library functions other than CoGetMalloc and memory allocation functions. 
+            Applications that do not require the additional functionality enabled by OleInitialize 
+            should call CoInitializeEx instead of OleInitialize
+            </summary>
+            <param name="reserved">must be NULL.</param>
+            <returns>This function supports the standard return values E_INVALIDARG, E_OUTOFMEMORY, and E_UNEXPECTED,
+            as well as the following: 
+            S_OK 
+            The COM library and additional functionality were initialized successfully on this apartment.
+            S_FALSE 
+            The COM library is already initialized on this apartment.
+            OLE_E_WRONGCOMPOBJ 
+            The versions of COMPOBJ.DLL and OLE2.DLL on your machine are incompatible with each other.
+            RPC_E_CHANGED_MODE 
+            A previous call to CoInitializeEx specified the concurrency model for this apartment as multithread apartment (MTA). If running Windows 2000, this could also mean that a change from neutral threaded apartment to single threaded apartment occurred.
+            </returns>
+        </member>
+        <member name="M:BJMT.Win32API.Ole32.OleUninitialize">
+            <summary>
+            Closes the COM library on the apartment, releases any class factories, 
+            other COM objects, or servers held by the apartment, disables RPC on 
+            the apartment, and frees any resources the apartment maintains.
+            </summary>
+        </member>
+        <member name="T:BJMT.Utility.OSUtility">
+            <summary>
+            操作系统实用工具类
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.OSUtility.DeleteExpiredFiles(System.IO.DirectoryInfo,System.Int32,System.Int32)">
+            <summary>
+            删除指定目录下的过期文件
+            </summary>
+            <param name="path">指定的目录</param>
+            <param name="expiredDays">过期天数</param>
+            <param name="interval">删除文件时的间隔（毫秒），如果为零或小于零，表示无间隔。</param>
+        </member>
+        <member name="M:BJMT.Utility.OSUtility.DeleteExpiredDirectory(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            删除指定目录下过期的子目录
+            </summary>
+            <param name="path">要搜索的路径。</param>
+            <param name="searchPattern">要与 path 中的文件名匹配的搜索字符串。</param>
+            <param name="expiredDays">过期天数</param>
+            <param name="interval">删除文件时的间隔（毫秒），如果为零或小于零，表示无间隔。</param>
+        </member>
+        <member name="M:BJMT.Utility.OSUtility.DeleteDirectoryQuietly(System.String,System.Int32)">
+            <summary>
+            以一种低CPU占用率的方式删除指定的目录及其所有子目录
+            </summary>
+            <param name="path">指定的目录</param>
+            <param name="interval">删除文件时的间隔（毫秒），如果为零或小于零，表示无间隔。</param>
+        </member>
+        <member name="M:BJMT.Utility.OSUtility.DeleteFilesQuietly(System.IO.DirectoryInfo,System.Int32)">
+            <summary>
+            以一种低CPU占用率的方式删除指定目录下的所有文件
+            </summary>
+            <param name="path">指定的目录</param>
+            <param name="interval">删除文件时的间隔（毫秒），如果为零或小于零，表示无间隔。</param>
+        </member>
+        <member name="T:BJMT.Utility.MemoryUtility">
+            <summary>
+            内存操作工具类
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.MemoryUtility.LowOfLong(System.UInt32)">
+            <summary>
+            得到UInt32的低位数值
+            </summary>
+            <param name="value">UInt32 型数字</param>
+            <returns>UInt16数值</returns>
+        </member>
+        <member name="M:BJMT.Utility.MemoryUtility.HighOfLong(System.UInt32)">
+            <summary>
+            得到UInt32的高位数值
+            </summary>
+            <param name="value">UInt32 型数字</param>
+            <returns>UInt16数值</returns>
+        </member>
+        <member name="M:BJMT.Utility.MemoryUtility.LowOfWord(System.UInt16)">
+            <summary>
+            得到UInt16的低位数值
+            </summary>
+            <param name="value">UInt16 型数字</param>
+            <returns>byte数值</returns>
+        </member>
+        <member name="M:BJMT.Utility.MemoryUtility.HighOfWord(System.UInt16)">
+            <summary>
+            得到UInt16的高位数值
+            </summary>
+            <param name="value">UInt16 型数字</param>
+            <returns>byte数值</returns>
+        </member>
+        <member name="T:BJMT.Threading.ActiveObject.ActiveTaskEventType">
+            <summary>
+            任务事件类型
+            </summary>
+        </member>
+        <member name="F:BJMT.Threading.ActiveObject.ActiveTaskEventType.Executing">
+            <summary>
+            任务执行前
+            </summary>
+        </member>
+        <member name="F:BJMT.Threading.ActiveObject.ActiveTaskEventType.Executed">
+            <summary>
+            任务执行后
+            </summary>
+        </member>
+        <member name="F:BJMT.Threading.ActiveObject.ActiveTaskEventType.Exception">
+            <summary>
+            异常
+            </summary>
+        </member>
+        <member name="T:BJMT.Reflection.Proxy">
+            <summary>
+            TODO: 类的描述信息
+            </summary>
+        </member>
+        <member name="M:BJMT.Reflection.Proxy.NewProxyInstance(System.Type,System.Type[],BJMT.Reflection.IInvocationHandler,System.Object[],System.Object[])">
+            <summary>
+            创建代理实例
+            </summary>
+            <param name="declaringType"></param>
+            <param name="interfaceTypes"></param>
+            <param name="h"></param>
+            <param name="mixins"></param>
+            <param name="arguments"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Reflection.Proxy.NewProxyInstance(System.Type[],BJMT.Reflection.IInvocationHandler,System.Object[])">
+            <summary>
+            创建代理实例
+            </summary>
+            <param name="interfaceTypes"></param>
+            <param name="h"></param>
+            <param name="mixins"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BJMT.Diagnostics.SingletonProcessChecker">
+            <summary>
+            单进程实例检查器
+            </summary>
+        </member>
+        <member name="F:BJMT.Diagnostics.SingletonProcessChecker._mutext">
+            <summary>
+            互斥体
+            </summary>
+        </member>
+        <member name="M:BJMT.Diagnostics.SingletonProcessChecker.#ctor(System.String)">
+            <summary>
+            构造单进程实例检查器
+            </summary>
+            <param name="symbolicName"></param>
+        </member>
+        <member name="M:BJMT.Diagnostics.SingletonProcessChecker.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="P:BJMT.Diagnostics.SingletonProcessChecker.IsPassed">
+            <summary>
+            得到一个值用来指示是否通过检查
+            </summary>
+        </member>
+        <member name="T:BJMT.Configuration.ISettingsService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BJMT.Configuration.ISettingsService.GetUserSettings(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BJMT.Configuration.ISettingsService.SystemSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BJMT.Configuration.ISettingsService.Users">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BJMT.Mapping.IConverter">
+            <summary>
+            支持基本数据类型，以及Enum和Nullable数据类型间的相互转换
+            </summary>
+        </member>
+        <member name="M:BJMT.Mapping.IConverter.IsPrimitiveType(System.Type)">
+            <summary>
+            判断指定的类型是否为原始类型
+            The primitive types are Boolean, Byte, SByte, Int16, UInt16, Int32, UInt32, Int64, UInt64, IntPtr, UIntPtr, Char, Double, Single,Decimal,DateTime,DBNull,Enum,Nullable.
+            </summary>
+            <param name="type">需要判断的类型</param>
+            <returns>true表示原始类型，false表示不是原始类型。</returns>
+        </member>
+        <member name="M:BJMT.Mapping.IConverter.Convert(System.Object,System.Type)">
+            <summary>
+            类型转换
+            </summary>
+            <param name="from">源类型</param>
+            <param name="toType">目标类型</param>
+            <returns>目标类型的实例</returns>
+        </member>
+        <member name="M:BJMT.Mapping.IConverter.Convert``2(``0)">
+            <summary>
+            类型转换
+            </summary>
+            <typeparam name="TFrom">源类型</typeparam>
+            <typeparam name="TTo">目标类型</typeparam>
+            <param name="from">源类型实例</param>
+            <returns>目标类型的实例的实例</returns>
+        </member>
+        <member name="T:BJMT.Collections.ProductCache`1">
+            <summary>
+            产品缓存池类。参见OS中生产者-消费者问题中的缓存池。
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ProductCache`1._productQueue">
+            <summary>
+            产品缓存
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ProductCache`1._queueMaxLength">
+            <summary>
+            缓存最大长度
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ProductCache`1._semephoreWatiTime">
+            <summary>
+            -1表示立即通知消费者，大于0表示产品放入缓存后的延迟通知时间（ms）。
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ProductCache`1._dataHandleThread">
+            <summary>
+            处理线程
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ProductCache`1._dataHandleThreadName">
+            <summary>
+            线程名称
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ProductCache`1._cacheSemaphore">
+            <summary>
+            信号量
+            </summary>
+        </member>
+        <member name="M:BJMT.Collections.ProductCache`1.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:BJMT.Collections.ProductCache`1.Finalize">
+            <summary>
+            终结函数
+            </summary>
+        </member>
+        <member name="M:BJMT.Collections.ProductCache`1.#ctor(System.Int32)">
+            <summary>
+            带参数的构造函数
+            </summary>
+            <param name="timeout">表示产品从放入缓存池到通知给消费的时延(ms)，零值表示立即通知。</param>
+        </member>
+        <member name="M:BJMT.Collections.ProductCache`1.#ctor(System.UInt32,System.Int32)">
+            <summary>
+            带参数的构造函数
+            </summary>
+            <param name="capacity">缓存池最大产品个数</param>
+            <param name="timeout">表示产品从放入缓存池到通知给消费的时延(ms)，零值表示立即通知。</param>
+        </member>
+        <member name="M:BJMT.Collections.ProductCache`1.ThreadEntry">
+            <summary>
+            处理线程
+            </summary>
+        </member>
+        <member name="M:BJMT.Collections.ProductCache`1.NotifyEvent(BJMT.Collections.ProductCreatedEventArgs{`0})">
+            <summary>
+            通知事件
+            </summary>
+        </member>
+        <member name="M:BJMT.Collections.ProductCache`1.Enqueue(`0)">
+            <summary>
+            添加产品
+            </summary>
+        </member>
+        <member name="M:BJMT.Collections.ProductCache`1.DequeueHead">
+            <summary>
+            取出第一个产品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Collections.ProductCache`1.DequeueAll">
+            <summary>
+            取出所有产品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Collections.ProductCache`1.Open">
+            <summary>
+            打开缓存池
+            </summary>
+        </member>
+        <member name="M:BJMT.Collections.ProductCache`1.Close">
+            <summary>
+            关闭缓冲池
+            </summary>
+        </member>
+        <member name="M:BJMT.Collections.ProductCache`1.AddProduct(`0)">
+            <summary>
+            向缓存池中添加一个产品
+            </summary>
+            <param name="product"></param>
+        </member>
+        <member name="M:BJMT.Collections.ProductCache`1.Clear">
+            <summary>
+            清空缓存池。
+            </summary>
+            <returns>返回清空前的元素。</returns>
+        </member>
+        <member name="E:BJMT.Collections.ProductCache`1.ProductCreated">
+            <summary>
+            一个事件，当有产品产生时引发
+            </summary>
+        </member>
+        <member name="P:BJMT.Collections.ProductCache`1.IsOpen">
+            <summary>
+            获取一个值，用于表示缓存池是否处于打开状态。
+            </summary>
+        </member>
+        <member name="P:BJMT.Collections.ProductCache`1.Count">
+            <summary>
+            获取缓存池中产品的个数
+            </summary>
+        </member>
+        <member name="P:BJMT.Collections.ProductCache`1.Capacity">
+            <summary>
+            获取/设置一个值，用于表示缓存池中可存放产品的最大个数
+            </summary>
+        </member>
+        <member name="P:BJMT.Collections.ProductCache`1.DelayNotify">
+            <summary>
+            是否为延迟通知
+            </summary>
+        </member>
+        <member name="P:BJMT.Collections.ProductCache`1.TimeOut">
+            <summary>
+            获取/设置一个值，用于表示产品从放入缓存池到通知给消费的时延(ms)。
+            </summary>
+        </member>
+        <member name="P:BJMT.Collections.ProductCache`1.ThreadName">
+            <summary>
+            获取/设置一个值，用于表示数据处理线程的名称。
+            </summary>
+        </member>
+        <member name="T:BJMT.Utility.CollectionUtility">
+            <summary>
+            Provides methods for manipulating collections.
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.CollectionUtility.Slice``1(``0[],System.Int32,System.Int32)">
+            <summary>
+            Returns a subset array of type T.
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.CollectionUtility.Slice``1(System.Collections.Generic.ICollection{``0},System.Int32,System.Int32)">
+            <summary>
+            Returns a subset array of type T.
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.CollectionUtility.ToArray``1(System.Collections.Generic.ICollection{``0})">
+            <summary>
+            Returns an ICollection&lt;&gt;'s elements as an array.
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.CollectionUtility.ToBoolArray(System.Collections.BitArray)">
+            <summary>
+            Returns a boolean array representing the values stored in the BitArray.
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.CollectionUtility.Concat``1(``0[],``0[])">
+            <summary>
+            Concatenates array1 with array2.
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.CollectionUtility.Concat``1(``0[],``0[],``0[][])">
+            <summary>
+            Concatenates arrays
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.CollectionUtility.Update``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IList{``0},System.Int32)">
+            <summary>
+            Updates subset of values in a collection.
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.CollectionUtility.CreateDefaultCollection``2(``1,System.Int32)">
+            <summary>
+            Creates a collection initialized to a default value.
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.CollectionUtility.Clear``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32,``0)">
+            <summary>
+            Sets a range of elements in the System.Array the defaultValue specified.
+            </summary>
+        </member>
+        <member name="T:BJMT.Utility.BCDEncoding">
+            <summary>
+            BCD编码
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.BCDEncoding.BuildBCD(System.Int32)">
+            <summary>
+            构建BCD码
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Utility.BCDEncoding.ParseBCD(System.Int32)">
+            <summary>
+            解析BCD码
+            </summary>
+        </member>
+        <member name="T:BJMT.IExtensionManager">
+            <summary>
+            扩展管理器接口定义
+            </summary>
+        </member>
+        <member name="M:BJMT.IExtensionManager.Resovle(System.String,System.Type,System.Boolean)">
+            <summary>
+            解析扩展
+            </summary>
+            <param name="extensionPoint">扩展点路径</param>
+            <param name="arrayElementType">扩展对象类型</param>
+            <param name="reuseCachedInstance">是否自动缓存对象实例</param>
+            <returns>返回扩展对象列表</returns>
+        </member>
+        <member name="M:BJMT.IExtensionManager.Resovle``1(System.String,System.Boolean)">
+            <summary>
+            解析扩展
+            </summary>
+            <typeparam name="T">扩展对象类</typeparam>
+            <param name="extensionPoint">扩展点</param>
+            <param name="reuseCachedInstance">是否自动缓存对象实例</param>
+            <returns>返回扩展对象列表</returns>
+        </member>
+        <member name="T:BJMT.Threading.ActiveObject.IActiveObject">
+            <summary>
+            主动对象接口
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.IActiveObject.Start">
+            <summary>
+            启动主动对象
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.IActiveObject.Stop">
+            <summary>
+            停止主动对象
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.IActiveObject.AddTask(BJMT.Threading.ActiveObject.IActiveTask)">
+            <summary>
+            添加主动任务
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.IActiveObject.AddTaskListener(BJMT.Threading.ActiveObject.IActiveTaskListener)">
+            <summary>
+            添加任务监听器
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.IActiveObject.RemoveTaskListener(BJMT.Threading.ActiveObject.IActiveTaskListener)">
+            <summary>
+            移除任务监听器
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.IActiveObject.AddListener(BJMT.Threading.ActiveObject.IActiveObjectListener)">
+            <summary>
+            添加主动对象监听器
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.IActiveObject.RemoveListener(BJMT.Threading.ActiveObject.IActiveObjectListener)">
+            <summary>
+            移除主动对象监听器
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="P:BJMT.Threading.ActiveObject.IActiveObject.Name">
+            <summary>
+            得到一个值来指示当前主动对象的名称
+            </summary>
+        </member>
+        <member name="P:BJMT.Threading.ActiveObject.IActiveObject.CurrentTask">
+            <summary>
+            得到当前正在执行的主动任务
+            </summary>
+        </member>
+        <member name="T:BJMT.Threading.ActiveObject.ActiveObjectExtensions">
+            <summary>
+            主动任务扩展类
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.ActiveObjectExtensions.AddTask(BJMT.Threading.ActiveObject.IActiveObject,System.Action)">
+            <summary>
+            添加一个同步任务
+            </summary>
+            <param name="activeObject"></param>
+            <param name="task"></param>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.ActiveObjectExtensions.AddAsyncTask(BJMT.Threading.ActiveObject.IActiveObject,System.Action)">
+            <summary>
+            添加一个异步任务
+            </summary>
+            <param name="activeObject"></param>
+            <param name="task"></param>
+        </member>
+        <member name="T:BJMT.Threading.ActiveObject.ActiveObjectEvent">
+            <summary>
+            主动对象事件
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.ActiveObjectEvent.#ctor(BJMT.Threading.ActiveObject.IActiveObject,System.Exception)">
+            <summary>
+            构造一个新的主动对象事件
+            </summary>
+            <param name="activeObject"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="P:BJMT.Threading.ActiveObject.ActiveObjectEvent.ActiveObject">
+            <summary>
+            得到主动对象
+            </summary>
+        </member>
+        <member name="P:BJMT.Threading.ActiveObject.ActiveObjectEvent.Exception">
+            <summary>
+            得到主动对象在分发执行主动任务中产生的异常（排除主动任务异常）
+            </summary>
+        </member>
+        <member name="T:BJMT.Security.Cryptography.CRC16">
+            <summary>
+            CRC16检验类
+            CRC-16生成多项式： x16+x15+x2+1
+            </summary>
+        </member>
+        <member name="F:BJMT.Security.Cryptography.CRC16._crc16Table">
+            <summary>
+            CRC16计算表
+            </summary>
+        </member>
+        <member name="F:BJMT.Security.Cryptography.CRC16._crcValue">
+            <summary>
+            计算的CRC校验值
+            </summary>
+        </member>
+        <member name="M:BJMT.Security.Cryptography.CRC16.#ctor(System.UInt32[])">
+            <summary>
+            
+            </summary>
+            <param name="crcTable">指定的CRC16计算表。</param>
+        </member>
+        <member name="M:BJMT.Security.Cryptography.CRC16.Initialize">
+            <summary>
+            初始化类的实现。
+            </summary>
+        </member>
+        <member name="M:BJMT.Security.Cryptography.CRC16.Reset">
+            <summary>
+            重置计算结果为0。
+            </summary>
+        </member>
+        <member name="M:BJMT.Security.Cryptography.CRC16.HashFinal">
+            <summary>
+            当在派生类中重写时，在加密流对象处理完最后的数据后完成哈希计算。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Security.Cryptography.CRC16.HashCore(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            当在派生类中重写时，将写入对象的数据路由到哈希算法以计算哈希值。
+            </summary>
+            <param name="buffer"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+        </member>
+        <member name="P:BJMT.Security.Cryptography.CRC16.HashSize">
+            <summary>
+            获取计算所得的哈希代码的大小（以位为单位）。
+            </summary>
+        </member>
+        <member name="P:BJMT.Security.Cryptography.CRC16.Hash">
+            <summary>
+            获取计算所得的哈希代码的值。
+            </summary>
+        </member>
+        <member name="T:BJMT.Reflection.IInvocationHandler">
+            <summary>
+            Defines an invocation handler.
+            </summary>
+        </member>
+        <member name="M:BJMT.Reflection.IInvocationHandler.Invoke(System.Object,System.Reflection.MethodInfo,System.Object[])">
+            <summary>
+            Processes an invocation on a target.
+            </summary>
+            <param name="target">The target object</param>
+            <param name="method">The method information.</param>
+            <param name="parameters">The parameter values.</param>
+            <returns>The return value.</returns>
+        </member>
+        <member name="T:BJMT.Exceptions.IExceptionHandler">
+            <summary>
+            异常处理器接口
+            </summary>
+        </member>
+        <member name="M:BJMT.Exceptions.IExceptionHandler.HandleException(System.Exception,System.String)">
+            <summary>
+            处理异常
+            </summary>
+            <param name="ex">将要被处理的异常</param>
+            <param name="customInformation">自定义的异常信息</param>
+        </member>
+        <member name="T:BJMT.Common">
+            <summary>
+            公共函数库类
+            </summary>
+        </member>
+        <member name="M:BJMT.Common.BytesToString(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            将字符数组中一部分转换为字符串
+            </summary>
+            <param name="b">要转换的字符所在的数组</param>
+            <param name="offset">要转换的首字符位置</param>
+            <param name="len">要转换的长度</param>
+            <returns>转换后的字符串</returns>
+        </member>
+        <member name="M:BJMT.Common.StringToBytes(System.String)">
+            <summary>
+            将字符串转换为字符数组
+            </summary>
+            <param name="s">要转换的字符串</param>
+            <returns>转换后的字符数组</returns>
+        </member>
+        <member name="M:BJMT.Common.StringToBytes(System.String,System.Byte[],System.Int32)">
+            <summary>
+            将字符串转换并填入字符数组的相应位置
+            </summary>
+            <param name="s">要转换的字符串</param>
+            <param name="buff">填入的目的字符数组</param>
+            <param name="offset">填入的位置</param>
+            <returns>成功为true;否则为false</returns>
+        </member>
+        <member name="M:BJMT.Common.BytesToDateTime(System.Byte[],System.Int32)">
+            <summary>
+            将字符数组中的一部分转换为DateTime
+            </summary>
+            <param name="b">要转换的字符数组</param>
+            <param name="offset">起始位置</param>
+            <returns>转换后的DateTime</returns>
+        </member>
+        <member name="M:BJMT.Common.DateTimeToBytes(System.DateTime)">
+            <summary>
+            将DateTime转换为字符数组
+            </summary>
+            <param name="dt">要转换的DateTime</param>
+            <returns>转换后的字符数组</returns>
+        </member>
+        <member name="M:BJMT.Common.DateTimeToBytes(System.DateTime,System.Byte[],System.Int32)">
+            <summary>
+            将DateTime转换并填入字符数组的相应位置
+            </summary>
+            <param name="dt">要转换的DateTime</param>
+            <param name="buff">填入的目的字符数组</param>
+            <param name="offset">填入的起始位置</param>
+            <returns>成功为true;否则为false</returns>
+        </member>
+        <member name="M:BJMT.Common.BytesToIntXX(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            将字符数组中的一部分转换为相应的整数
+            </summary>
+            <param name="b">要转换的字符数组</param>
+            <param name="offset">起始位置</param>
+            <param name="len">要转换的长度</param>
+            <returns>转换后的整数</returns>
+        </member>
+        <member name="M:BJMT.Common.IntXXToBytes(System.Object)">
+            <summary>
+            将各种类型的整数转换为字符数组
+            </summary>
+            <param name="val">要转换的整数</param>
+            <returns>转换后的字符数组</returns>
+        </member>
+        <member name="M:BJMT.Common.IntXXToBytes(System.Object,System.Byte[],System.Int32)">
+            <summary>
+            将各种类型的整数转换并填入字符数组的相应位置
+            </summary>
+            <param name="val">要转换的整数</param>
+            <param name="buff">转换后填入的目的字符数组</param>
+            <param name="offset">起始位置</param>
+            <returns>成功为true;否则为false</returns>
+        </member>
+        <member name="M:BJMT.Common.GetTrainIdentifierInfo(System.String,System.String@,System.String@)">
+            <summary>
+            从列车标识中取出TID和DID
+            </summary>
+            <param name="trainId">列车标识</param>
+            <param name="tid">列车追踪标识</param>
+            <param name="did">列车目的地标识</param>
+        </member>
+        <member name="M:BJMT.Common.BytesToInt16(System.Byte[],System.Int32)">
+            <summary>
+            将字符数组中的一部分转换为相应的Int16整数
+            </summary>
+            <param name="b">要转换的字符数组</param>
+            <param name="offset">起始位置</param>
+            <returns>转换后的Int16整数</returns>
+        </member>
+        <member name="M:BJMT.Common.BytesToInt32(System.Byte[],System.Int32)">
+            <summary>
+            将字符数组中的一部分转换为相应的Int32整数
+            </summary>
+            <param name="b">要转换的字符数组</param>
+            <param name="offset">起始位置</param>
+            <returns>转换后的Int32整数</returns>
+        </member>
+        <member name="T:BJMT.Utility.EnumDescriptionAttribute">
+            <summary>
+            枚举描述属性
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.EnumDescriptionAttribute.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="text">显示名称</param>
+        </member>
+        <member name="M:BJMT.Utility.EnumDescriptionAttribute.ToString">
+            <summary>
+            转换为字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BJMT.Utility.EnumDescriptionAttribute.Text">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="T:BJMT.Threading.ActiveObject.AsyncActiveTaskImpl">
+            <summary>
+            主动任务委托包装器
+            </summary>
+        </member>
+        <member name="T:BJMT.Serialization.NewtonsoftJsonSerializer">
+            <summary>
+            Newtonsoft Json 序列化器
+            </summary>
+        </member>
+        <member name="M:BJMT.Serialization.NewtonsoftJsonSerializer.Serialize(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BJMT.Serialization.NewtonsoftJsonSerializer.Deserialize(System.Byte[],System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BJMT.Serialization.NewtonsoftJsonSerializer.Serialize(System.IO.Stream,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BJMT.Serialization.NewtonsoftJsonSerializer.SerializeString(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="graph"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Serialization.NewtonsoftJsonSerializer.Deserialize(System.String,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="jsonString"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Serialization.NewtonsoftJsonSerializer.Deserialize(System.IO.Stream,System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="T:BJMT.Exceptions.IExceptionResolver">
+            <summary>
+            异常解析器接口
+            </summary>
+        </member>
+        <member name="M:BJMT.Exceptions.IExceptionResolver.IsSupport(System.Exception)">
+            <summary>
+            是否支持特定类型异常的解析
+            </summary>
+            <param name="ex">特定的异常</param>
+            <returns>ture表示支持，false表示不支持</returns>
+        </member>
+        <member name="M:BJMT.Exceptions.IExceptionResolver.HandleException(System.Exception,System.String)">
+            <summary>
+            处理指定的异常
+            </summary>
+            <param name="ex">将要被处理的异常</param>
+            <param name="customInformation">自定义消息</param>
+        </member>
+        <member name="P:BJMT.Exceptions.IExceptionResolver.Order">
+            <summary>
+            获取/设置解析器的顺序号。
+            </summary>
+        </member>
+        <member name="P:BJMT.Exceptions.IExceptionResolver.ExceptionRenders">
+            <summary>
+            获取/设置异常呈现器集合
+            </summary>
+        </member>
+        <member name="T:BJMT.Exceptions.ExceptionHandler">
+            <summary>
+            异常处理器
+            </summary>
+        </member>
+        <member name="F:BJMT.Exceptions.ExceptionHandler._resolvers">
+            <summary>
+            异常解析器集合
+            </summary>
+        </member>
+        <member name="M:BJMT.Exceptions.ExceptionHandler.Init(BJMT.Exceptions.IExceptionResolver[],BJMT.Exceptions.IExceptionRender[])">
+            <summary>
+            初始化异常处理器
+            </summary>
+            <param name="resolvers">异常解析器集合</param>
+            <param name="renders">异常呈现器集合</param>
+        </member>
+        <member name="M:BJMT.Exceptions.ExceptionHandler.HandleException(System.Exception,System.String)">
+            <summary>
+            处理异常，按照解析器的Order从小到大进行排序然后依次处理
+            </summary>
+            <param name="ex"></param>
+            <param name="customInformation"></param>
+        </member>
+        <member name="T:BJMT.Threading.ActiveObject.IActiveTaskListener">
+            <summary>
+            主动任务监听器接口
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.IActiveTaskListener.TaskEvent(BJMT.Threading.ActiveObject.ActiveTaskEvent)">
+            <summary>
+            在主动任务执行前、执行后和异常时触发
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:BJMT.Threading.ActiveObject.IActiveObjectListener">
+            <summary>
+            主动对象监听器接口
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.IActiveObjectListener.ActiveObjectEvent(BJMT.Threading.ActiveObject.ActiveObjectEvent)">
+            <summary>
+            当前主动对象在分发执行主动任务中产生异常（排除主动任务异常）时触发
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:BJMT.StringUtil">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BJMT.StringUtil.Matches(System.String,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="src"></param>
+            <param name="prefix"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BJMT.Mapper">
+            <summary>
+            类型映射器
+            </summary>
+        </member>
+        <member name="F:BJMT.Mapper.InnerMapperManager">
+            <summary>
+            映射器管理器
+            </summary>
+        </member>
+        <member name="M:BJMT.Mapper.SetMapperManager(BJMT.Mapping.IMapperManager)">
+            <summary>
+            设置映射管理器
+            </summary>
+            <param name="mapperManager">新的映射管理器</param>
+        </member>
+        <member name="M:BJMT.Mapper.CreateMapper``2">
+            <summary>
+            创建映射器
+            </summary>
+            <typeparam name="TFrom">源类型</typeparam>
+            <typeparam name="TTo">目标类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapper.Map(System.Object,System.Type)">
+            <summary>
+            类型映射转换
+            </summary>
+            <param name="from">源对象</param>
+            <param name="toType">目标类型</param>
+            <returns>目标类型对应的实例</returns>
+        </member>
+        <member name="M:BJMT.Mapper.Map``2(``0)">
+            <summary>
+            类型映射转换
+            </summary>
+            <param name="from">源类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapper.Map``2(``0,``1@)">
+            <summary>
+            类型映射转换
+            </summary>
+            <param name="from">源类型</param>
+            <param name="to">目标类型</param>
+        </member>
+        <member name="T:BJMT.Mapping.IMapper`2">
+            <summary>
+            泛型映射器接口
+            </summary>
+            <typeparam name="TFrom">源对象的类型</typeparam>
+            <typeparam name="TTo">目标对象的类型</typeparam>
+        </member>
+        <member name="M:BJMT.Mapping.IMapper`2.IgnoreCase(System.Boolean)">
+            <summary>
+            忽略大小写
+            </summary>
+            <param name="flag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapping.IMapper`2.IgnoreUnderscore(System.Boolean)">
+            <summary>
+            忽略下划线
+            </summary>
+            <param name="flag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapping.IMapper`2.ForMember(System.Linq.Expressions.Expression{System.Func{`1,System.Object}},System.Func{`0,System.Object})">
+            <summary>
+            选择成员映射
+            </summary>
+            <param name="destinationMember"></param>
+            <param name="memberOptions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapping.IMapper`2.IgnoreSourceMember(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+            <summary>
+            忽略源对象中的成员
+            </summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapping.IMapper`2.IgnoreDestinationMember(System.Linq.Expressions.Expression{System.Func{`1,System.Object}})">
+            <summary>
+            忽略目标对象中的成员
+            </summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapping.IMapper`2.IgnoreSourceMembers(System.Func{System.Type,System.Collections.Generic.IEnumerable{System.String}})">
+            <summary>
+            忽略源对象中的成员列表
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapping.IMapper`2.IgnoreDestinationMembers(System.Func{System.Type,System.Collections.Generic.IEnumerable{System.String}})">
+            <summary>
+            忽略目标对象中的成员列表
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapping.IMapper`2.MatchMembers(System.Func{System.String,System.String,System.Boolean})">
+            <summary>
+            自定义匹配策略
+            </summary>
+            <param name="match"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapping.IMapper`2.ConvertUsing``2(System.Func{``0,``1})">
+            <summary>
+            自定义成员间类型转换器
+            </summary>
+            <typeparam name="From"></typeparam>
+            <typeparam name="To"></typeparam>
+            <param name="converter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapping.IMapper`2.BeforeMap(System.Action{`0,`1})">
+            <summary>
+            注册转换前监听器
+            </summary>
+            <param name="handler"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapping.IMapper`2.AfterMap(System.Action{`0,`1})">
+            <summary>
+            注册转换后监听器
+            </summary>
+            <param name="handler"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapping.IMapper`2.Map(`0)">
+            <summary>
+            类型映射转换
+            </summary>
+            <param name="from"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Mapping.IMapper`2.Map(`0,`1@)">
+            <summary>
+            类型映射转换
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+        </member>
+        <member name="T:BJMT.Exceptions.UnknowExceptionResolver">
+            <summary>
+            未知异常解析器
+            </summary>
+        </member>
+        <member name="T:BJMT.Exceptions.ExceptionResolver">
+            <summary>
+            异常解析器基类
+            </summary>
+        </member>
+        <member name="M:BJMT.Exceptions.ExceptionResolver.IsSupport(System.Exception)">
+            <summary>
+            是否支持特定类型异常的解析
+            </summary>
+            <param name="ex">异常对象</param>
+            <returns>ture表示支持，false表示不支持</returns>
+        </member>
+        <member name="M:BJMT.Exceptions.ExceptionResolver.OnResolve(System.Exception,System.String)">
+            <summary>
+            解析异常
+            </summary>
+            <param name="ex">将要被解析的异常</param>
+            <param name="customInformation">自定义信息</param>
+        </member>
+        <member name="M:BJMT.Exceptions.ExceptionResolver.HandleException(System.Exception,System.String)">
+            <summary>
+            处理异常
+            </summary>
+            <param name="ex">将要被处理的异常</param>
+            <param name="customInformation">自定义信息</param>
+        </member>
+        <member name="M:BJMT.Exceptions.ExceptionResolver.RenderException(System.Exception,System.String)">
+            <summary>
+            呈现异常
+            </summary>
+            <param name="ex">异常对象</param>
+            <param name="customInformation">自定义信息</param>
+        </member>
+        <member name="P:BJMT.Exceptions.ExceptionResolver.ExceptionRenders">
+            <summary>
+            获取/设置异常呈现器集合
+            </summary>
+        </member>
+        <member name="P:BJMT.Exceptions.ExceptionResolver.Order">
+            <summary>
+            获取/设置异常解析器的序号
+            </summary>
+        </member>
+        <member name="M:BJMT.Exceptions.UnknowExceptionResolver.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:BJMT.Exceptions.UnknowExceptionResolver.IsSupport(System.Exception)">
+            <summary>
+            是否支持指定的异常类型
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Exceptions.UnknowExceptionResolver.OnResolve(System.Exception,System.String)">
+            <summary>
+            解析异常
+            </summary>
+            <param name="ex"></param>
+            <param name="customInformation"></param>
+        </member>
+        <member name="T:BJMT.Utility.SystemUtility">
+            <summary>
+            系统实用工具类
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.SystemUtility.RegServer(System.String)">
+            <summary>
+            注册指定的DLL。
+            </summary>
+            <param name="dllPath">将要注册的文件的路径</param>
+            <returns>注册成功返回true，否则返回false。</returns>
+        </member>
+        <member name="T:BJMT.Threading.ActiveObject.TaskExceptionType">
+            <summary>
+            异常类型
+            </summary>
+        </member>
+        <member name="F:BJMT.Threading.ActiveObject.TaskExceptionType.ExecutingError">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BJMT.Threading.ActiveObject.TaskExceptionType.ExecuteError">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BJMT.Threading.ActiveObject.TaskExceptionType.ExecutedError">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BJMT.Exceptions.IExceptionRender">
+            <summary>
+            异常呈现器
+            </summary>
+        </member>
+        <member name="M:BJMT.Exceptions.IExceptionRender.RenderException(System.Exception,System.String)">
+            <summary>
+            呈现异常
+            </summary>
+            <param name="ex">将要被呈现的异常</param>
+            <param name="customInformation"></param>
+        </member>
+        <member name="T:BJMT.Converter">
+            <summary>
+            类型转换器
+            </summary>
+        </member>
+        <member name="F:BJMT.Converter.InnerConverter">
+            <summary>
+            类型转换器
+            </summary>
+        </member>
+        <member name="M:BJMT.Converter.SetConverter(BJMT.Mapping.IConverter)">
+            <summary>
+            设置类型转换器
+            </summary>
+            <param name="converter">将要设置的类型转换器</param>
+        </member>
+        <member name="M:BJMT.Converter.IsPrimitiveType(System.Type)">
+            <summary>
+            判断指定的类型是否为原始类型
+            The primitive types are Boolean, Byte, SByte, Int16, UInt16, Int32, UInt32, Int64, UInt64, IntPtr, UIntPtr, Char, Double, Single,Decimal,DateTime,DBNull,Enum,Nullable.
+            </summary>
+            <param name="type">需要判断的类型</param>
+            <returns>true表示原始类型，false表示不是原始类型。</returns>
+        </member>
+        <member name="M:BJMT.Converter.Convert(System.Object,System.Type)">
+            <summary>
+            类型转换
+            </summary>
+            <param name="from">源类型</param>
+            <param name="toType">目标类型</param>
+            <returns>目标类型的实例</returns>
+        </member>
+        <member name="M:BJMT.Converter.Convert``2(``0)">
+            <summary>
+            类型转换
+            </summary>
+            <typeparam name="TFrom">源类型</typeparam>
+            <typeparam name="TTo">目标类型</typeparam>
+            <param name="from">源类型实例</param>
+            <returns>目标类型的实例的实例</returns>
+        </member>
+        <member name="T:BJMT.Configuration.ISettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BJMT.Configuration.ISettings.Clear">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BJMT.Configuration.ISettings.Flush">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BJMT.Configuration.ISettings.Get``1(System.String,``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Configuration.ISettings.SetValue(System.String,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:BJMT.Configuration.ISettings.Remove(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:BJMT.Configuration.ISettings.RemoveNode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BJMT.Configuration.ISettings.Node(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="pathName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Configuration.ISettings.NodeExists(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="pathName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Configuration.ISettings.Sync">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BJMT.Configuration.ISettings.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BJMT.Configuration.ISettings.AbsolutePath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BJMT.Configuration.ISettings.Keys">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BJMT.Configuration.ISettings.ChildrenNames">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BJMT.Configuration.ISettings.Parent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BJMT.CompositeDisposable">
+            <summary>
+            可复合的Disposable对象
+            </summary>
+        </member>
+        <member name="T:BJMT.ICompositeDisposable">
+            <summary>
+            可复合的Disposable对象接口
+            </summary>
+        </member>
+        <member name="M:BJMT.ICompositeDisposable.AddDisposable(System.IDisposable)">
+            <summary>
+            添加Disposable对象
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:BJMT.CompositeDisposable.#ctor">
+            <summary>
+            构造对象
+            </summary>
+        </member>
+        <member name="M:BJMT.CompositeDisposable.#ctor(System.Int32)">
+            <summary>
+            构造对象
+            </summary>
+            <param name="capacity"></param>
+        </member>
+        <member name="M:BJMT.CompositeDisposable.AddDisposable(System.IDisposable)">
+            <summary>
+            添加Disposable对象
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:BJMT.CompositeDisposable.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="T:BJMT.Utility.MemberDesAttribute">
+            <summary>
+            成员信息描述属性类
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.MemberDesAttribute.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="text">显示名称</param>
+        </member>
+        <member name="M:BJMT.Utility.MemberDesAttribute.ToString">
+            <summary>
+            转换为字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BJMT.Utility.MemberDesAttribute.Text">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="T:BJMT.Threading.ActiveObject.ActiveTaskEvent">
+            <summary>
+            主动任务事件
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.ActiveTaskEvent.#ctor(BJMT.Threading.ActiveObject.IActiveTask,BJMT.Threading.ActiveObject.ActiveTaskEventType,BJMT.Threading.ActiveObject.ActiveTaskException)">
+            <summary>
+            主动任务事件
+            </summary>
+            <param name="task"></param>
+            <param name="type"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="P:BJMT.Threading.ActiveObject.ActiveTaskEvent.Task">
+            <summary>
+            主动任务
+            </summary>
+        </member>
+        <member name="P:BJMT.Threading.ActiveObject.ActiveTaskEvent.Type">
+            <summary>
+            任务类型
+            </summary>
+        </member>
+        <member name="P:BJMT.Threading.ActiveObject.ActiveTaskEvent.Exception">
+            <summary>
+            任务异常
+            </summary>
+        </member>
+        <member name="P:BJMT.Threading.ActiveObject.ActiveTaskEvent.Cancelled">
+            <summary>
+            得到或设置一个值，用来指示在Executing下该主动任务是否被取消了
+            </summary>
+        </member>
+        <member name="F:BJMT.Threading.BlockingQueue`1.queue">
+            <summary>
+            缓存队列
+            </summary>
+        </member>
+        <member name="F:BJMT.Threading.BlockingQueue`1.semaphore">
+            <summary>
+            信号量
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.BlockingQueue`1.#ctor(System.UInt32)">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.BlockingQueue`1.Close">
+            <summary>
+            关闭阻塞式队列
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.BlockingQueue`1.Enqueue(`0)">
+            <summary>
+            向队列中添加一个元素
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="P:BJMT.Threading.BlockingQueue`1.Count">
+            <summary>
+            获取队列中包含的元素数
+            </summary>
+        </member>
+        <member name="P:BJMT.Threading.BlockingQueue`1.Capacity">
+            <summary>
+            获取一个值，用于表示队列中可存放元素的最大个数
+            </summary>
+        </member>
+        <member name="T:BJMT.Threading.ActiveObject.ActiveTaskException">
+            <summary>
+            主动任务异常
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.ActiveTaskException.#ctor(BJMT.Threading.ActiveObject.TaskExceptionType,System.String,System.Exception)">
+            <summary>
+            创建一个新的主动异常对象
+            </summary>
+            <param name="type"></param>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.ActiveTaskException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="P:BJMT.Threading.ActiveObject.ActiveTaskException.ExceptionType">
+            <summary>
+            异常类型
+            </summary>
+        </member>
+        <member name="T:BJMT.Threading.ActiveObject.ActiveObjectImpl">
+            <summary>
+            缺省主动对象实现
+            </summary>
+        </member>
+        <member name="F:BJMT.Threading.ActiveObject.ActiveObjectImpl.ApartmentState">
+            <summary>
+            得到一个值来指示当前线程的单元状态
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.ActiveObjectImpl.#ctor(System.String,System.Threading.ApartmentState)">
+            <summary>
+            构造一个新的主动对象
+            </summary>
+            <param name="activeObjectName">主动对象名称</param>
+            <param name="apartmentState">线程的单元状态，默认是MTA</param>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.ActiveObjectImpl.Start">
+            <summary>
+            启动主动对象
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.ActiveObjectImpl.Stop">
+            <summary>
+            停止主动对象
+            </summary>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.ActiveObjectImpl.AddTask(BJMT.Threading.ActiveObject.IActiveTask)">
+            <summary>
+            添加主动任务
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.ActiveObjectImpl.AddTaskListener(BJMT.Threading.ActiveObject.IActiveTaskListener)">
+            <summary>
+            添加任务监听器
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.ActiveObjectImpl.RemoveTaskListener(BJMT.Threading.ActiveObject.IActiveTaskListener)">
+            <summary>
+            移除任务监听器
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.ActiveObjectImpl.AddListener(BJMT.Threading.ActiveObject.IActiveObjectListener)">
+            <summary>
+            添加主动对象监听器
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.ActiveObjectImpl.RemoveListener(BJMT.Threading.ActiveObject.IActiveObjectListener)">
+            <summary>
+            移除主动对象监听器
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:BJMT.Threading.ActiveObject.ActiveObjectImpl.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="P:BJMT.Threading.ActiveObject.ActiveObjectImpl.Name">
+            <summary>
+            得到一个值来指示当前主动对象的名称
+            </summary>
+        </member>
+        <member name="P:BJMT.Threading.ActiveObject.ActiveObjectImpl.CurrentTask">
+            <summary>
+            得到当前正在执行的主动任务
+            </summary>
+        </member>
+        <member name="T:BJMT.Serialization.Serializer">
+            <summary>
+            序列化工具类
+            </summary>
+        </member>
+        <member name="F:BJMT.Serialization.Serializer.NewtonsoftJsonSerializer">
+            <summary>
+            dotnet DataContractJsonSerializer
+            </summary>
+        </member>
+        <member name="F:BJMT.Serialization.Serializer.DotNetDataContractJsonSerializer">
+            <summary>
+            dotnet DataContractJsonSerializer
+            </summary>
+        </member>
+        <member name="F:BJMT.Serialization.Serializer.DotNetXmlSerializer">
+            <summary>
+            dotnet xml Serializer
+            </summary>
+        </member>
+        <member name="F:BJMT.Serialization.Serializer.DotNetBinarySerializer">
+            <summary>
+            dotnet binary Serializer
+            </summary>
+        </member>
+        <member name="M:BJMT.Serialization.Serializer.SetSerializer(BJMT.Serialization.ISerializer)">
+            <summary>
+            自定义序列化器
+            </summary>
+            <param name="serializer"></param>
+        </member>
+        <member name="M:BJMT.Serialization.Serializer.Serialize(System.Object)">
+            <summary>
+            把对象序列化成字节数组
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Serialization.Serializer.Deserialize(System.Byte[],System.Type)">
+            <summary>
+            从字节数组中反序列化指定的类型对象
+            </summary>
+            <param name="buffer"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Serialization.Serializer.Deserialize``1(System.Byte[])">
+            <summary>
+            从字节数组中反序列化指定的类型对象
+            </summary>
+            <param name="buffer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Serialization.Serializer.Serialize(System.IO.Stream,System.Object)">
+            <summary>
+            把对象序列化到字节流
+            </summary>
+            <param name="serializationStream"></param>
+            <param name="graph"></param>
+        </member>
+        <member name="M:BJMT.Serialization.Serializer.Deserialize(System.IO.Stream,System.Type)">
+            <summary>
+            从字节流中反序列化指定的类型对象
+            </summary>
+            <param name="serializationStream"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Serialization.Serializer.Deserialize``1(System.IO.Stream)">
+            <summary>
+            从字节流中反序列化指定的类型对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="serializationStream"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BJMT.Serialization.Serializer.Current">
+            <summary>
+            获取当前的序列化器对象，默认是标准的XML序列化器
+            </summary>
+        </member>
+        <member name="T:BJMT.Impl.MapperManagerImpl">
+            <summary>
+            NLite 映射管理器
+            </summary>
+        </member>
+        <member name="T:BJMT.Win32API.WinError">
+            <summary>
+            与C++中的WinError.h相同
+            </summary>
+        </member>
+        <member name="F:BJMT.Win32API.WinError.S_OK">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="M:BJMT.Win32API.WinError.SUCCEEDED(System.Int32)">
+            <summary>
+            判断指定的参数是否为成功的值
+            </summary>
+            <param name="hr">待判断的返回值</param>
+            <returns>true表示指定的值表示成功。</returns>
+        </member>
+        <member name="M:BJMT.Win32API.WinError.FAILED(System.Int32)">
+            <summary>
+            判断指定的参数是否为失败的值。
+            </summary>
+            <param name="hr">待判断的返回值</param>
+            <returns>true表示指定的值表示失败。</returns>
+        </member>
+        <member name="T:BJMT.Utility.TimeUtility">
+            <summary>
+            时间操作工具类
+            </summary>
+        </member>
+        <member name="M:BJMT.Utility.TimeUtility.UTCToDateTime(System.Double)">
+            <summary>
+            将UTC时间（从 UTC1970.1.1 0:0:0 经过的秒数）转化为本地DateTime时间。
+            </summary>
+            <param name="d">double 型数字</param>
+            <returns>DateTime</returns>
+        </member>
+        <member name="M:BJMT.Utility.TimeUtility.DateTimeToUTC(System.DateTime)">
+            <summary>
+            将本地时间转换为UTC时间（从 UTC1970.1.1 0:0:0 经过的秒数）
+            </summary>
+            <param name="time">时间</param>
+            <returns>double</returns>
+        </member>
+        <member name="M:BJMT.Utility.TimeUtility.SetSystemTime(System.DateTime)">
+            <summary>
+            将系统的时间设定为指定的内容。
+            </summary>
+            <param name="localTime">指定的本地时间</param>
+        </member>
+        <member name="T:BJMT.Collections.ProductCreatedEventArgs`1">
+            <summary>
+            产品创建事件参数类
+            </summary>
+            <typeparam name="TProduct"></typeparam>
+        </member>
+        <member name="M:BJMT.Collections.ProductCreatedEventArgs`1.#ctor(`0)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="product">产品引用</param>
+        </member>
+        <member name="M:BJMT.Collections.ProductCreatedEventArgs`1.#ctor(System.Collections.Generic.IList{`0})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="products">产品集</param>
+        </member>
+        <member name="P:BJMT.Collections.ProductCreatedEventArgs`1.Products">
+            <summary>
+            获取产品集合
+            </summary>
+        </member>
+        <member name="T:BJMT.Inflector">
+            <summary>
+            单复数类型互相转换类
+            </summary>
+        </member>
+        <member name="M:BJMT.Inflector.Plural(System.String)">
+            <summary>
+            单数转复数
+            </summary>
+            <param name="word"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Inflector.Singular(System.String)">
+            <summary>
+            复数转单数
+            </summary>
+            <param name="word"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BJMT.Collections.ListSortOrder">
+            <summary>
+            指定链表的排序顺序,均按字符串方式
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ListSortOrder.Ascending">
+            <summary>
+            节点按升序顺序排序。例如，如果字符 9,11,25,8,按升序排序，则它们将显示为 11,25,8,9。
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ListSortOrder.Descending">
+            <summary>
+            节点按降序顺序排序。例如，如果字符 9,11,25,8, 按降序排序，则它们将显示为 9,8,25,11。
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ListSortOrder.AscendingUnitLength">
+            <summary>
+            节点按长度比较,长度相等时再按升序比较,例如,如果字符 9,11,25,8,按长度比较,则它们将显示为8,9,11,25
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ListSortOrder.DescendingUnitLength">
+            <summary>
+            节点按长度比较,长度相等时再按降序比较,例如,如果字符 9,11,25,8,按长度比较,则它们将显示为25,11,9,8
+            </summary>
+        </member>
+        <member name="T:BJMT.Collections.ThreadSafetyList`1">
+            <summary>
+            线程安全的链表类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:BJMT.Collections.ThreadSafetyList`1._list">
+            <summary>
+            链表类对象
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ThreadSafetyList`1._syncRoot">
+            <summary>
+            用于控制链表操作排它锁的对象
+            </summary>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.#ctor">
+            <summary>
+            初始化.MutexList类的新实例，该实例为空并且具有默认初始容量.
+            </summary>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            初始化MutexList类的新实例，该实例包含从指定集合复制的元素并且具有足够的容量来容纳所复制的元素。
+            </summary>
+            <param name="collection">一个集合，其元素被复制到新列表中</param>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.#ctor(System.Int32)">
+            <summary>
+            初始化MutexList类的新实例，该实例为空并且具有指定的初始容量。
+            </summary>
+            <param name="capacity">新列表最初可以存储的元素数</param>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.Add(`0)">
+            <summary>
+            将对象添加到 MutexList的结尾处。
+            </summary>
+            <param name="item">要添加到末尾处的对象。对于引用类型，该值可以为null</param>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.AddRange(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            将指定集合的元素添加到 MutexList的末尾。
+            </summary>
+            <param name="collection"> 一个集合，其元素应被添加到MutexList 的末尾。集合自身不能为null，但它可以包含为null的元素（如果类型 T 为引用类型）</param>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.AsReadOnly">
+            <summary>
+            回当前集合的只读MutexList包装
+            </summary>
+            <returns>作为当前 MutexList周围的只读包装的 System.Collections.Generic.ReadOnlyCollection</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.BinarySearch(`0)">
+            <summary>
+            使用默认的比较器在整个已排序的MutexList中搜索元素，并返回该元素从零开始的索引。
+            </summary>
+            <param name="item">要定位的对象。对于引用类型，该值可以为null</param>
+            <returns>如果找到 item，则为已排序的MutexList中 item 的从零开始的索引；否则为一个负数，该负数是大于
+                item 的第一个元素的索引的按位求补。如果没有更大的元素，则为MutexList.Count的按位求补。</returns> 
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.BinarySearch(`0,System.Collections.Generic.IComparer{`0})">
+            <summary>
+            使用指定的比较器在整个已排序的MutexList中搜索元素，并返回该元素从零开始的索引
+            </summary>
+            <param name="item">要定位的对象。对于引用类型，该值可以为null</param>
+            <param name="comparer">比较元素时要使用的 System.Collections.Generic.IComparer实现。- 或 - 为null 以使用默认比较器
+            ystem.Collections.Generic.Comparer.Default</param>
+            <returns>如果找到 item，则为已排序的MutexList中 item 的从零开始的索引；否则为一个负数，该负数是大于
+                item 的第一个元素的索引的按位求补。如果没有更大的元素，则为MutexList.Count的按位求补。</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.BinarySearch(System.Int32,System.Int32,`0,System.Collections.Generic.IComparer{`0})">
+            <summary>
+            使用指定的比较器在已排序MutexList 的某个元素范围中搜索元素，并返回该元素从零开始的索引
+            </summary>
+            <param name="index">要搜索的范围从零开始的起始索引</param>
+            <param name="count">要搜索的范围的长度</param>
+            <param name="item">要定位的对象。对于引用类型，该值可以为null</param>
+            <param name="comparer">比较元素时要使用的 System.Collections.Generic.IComparer实现。- 或 - 为null 以使用默认比较器
+            ystem.Collections.Generic.Comparer.Default</param>
+            <returns>如果找到 item，则为已排序的MutexList中 item 的从零开始的索引；否则为一个负数，该负数是大于
+                item 的第一个元素的索引的按位求补。如果没有更大的元素，则为MutexList.Count的按位求补。</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.Clear">
+            <summary>
+            从MutexList中移除所有元素
+            </summary>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.Contains(`0)">
+            <summary>
+            确定某元素是否在MutexList中
+            </summary>
+            <param name="item">要在MutexList中定位的对象。对于引用类型，该值可以为null</param>
+            <returns>如果找到 item，则为 true，否则为 false</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.CopyTo(`0[])">
+            <summary>
+            将整个MutexList复制到兼容的一维数组中，从目标数组的开头开始放置
+            </summary>
+            <param name="array">作为从MutexList复制的元素的目标位置的一维 System.Array。System.Array 必须具有从零开始的索引</param>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.CopyTo(`0[],System.Int32)">
+            <summary>
+            将整个MutexList复制到兼容的一维数组中，从目标数组的指定索引位置开始放置
+            </summary>
+            <param name="array">作为从MutexList复制的元素的目标位置的一维 System.Array。System.Array 必须具有从零开始的索引</param>
+            <param name="arrayIndex">array 中从零开始的索引，在此处开始复制</param>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.CopyTo(System.Int32,`0[],System.Int32,System.Int32)">
+            <summary>
+            将一定范围的元素从MutexList复制到兼容的一维数组中，从目标数组的指定索引位置开始放置
+            </summary>
+            <param name="index">源 MutexList中复制开始位置的从零开始的索引</param>
+            <param name="array">作为从MutexList复制的元素的目标位置的一维 System.Array。System.Array 必须具有从零开始的索引</param>
+            <param name="arrayIndex">array 中从零开始的索引，在此处开始复制</param>
+            <param name="count">要复制的元素数</param>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.IndexOf(`0)">
+            <summary>
+            搜索指定的对象，并返回整个MutexList中第一个匹配项的从零开始的索引。
+            </summary>
+            <param name="item">要在MutexList中定位的对象。对于引用类型，该值可以为null。</param>
+            <returns>如果在整个MutexList中找到 item 的第一个匹配项，则为该项的从零开始的索引；否则为-1</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.Insert(System.Int32,`0)">
+            <summary>
+            将元素插入MutexList 的指定索引处
+            </summary>
+            <param name="index">从零开始的索引，应在该位置插入 item</param>
+            <param name="item">要插入的对象。对于引用类型，该值可以为null</param>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.Remove(`0)">
+            <summary>
+             从MutexList中移除特定对象的第一个匹配项
+            </summary>
+            <param name="item">要从MutexList中移除的对象。对于引用类型，该值可以为null</param>
+            <returns>如果成功移除 item，则为 true；否则为 false。如果没有找到item，该方法也会返回 false</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.RemoveAt(System.Int32)">
+            <summary>
+            移除MutexList的指定索引处的元素
+            </summary>
+            <param name="index"> 要移除的元素的从零开始的索引</param>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.RemoveRange(System.Int32,System.Int32)">
+            <summary>
+            从MutexList中移除一定范围的元素
+            </summary>
+            <param name="index">要移除的元素的范围从零开始的起始索引</param>
+            <param name="count">要移除的元素数</param>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.ToArray">
+            <summary>
+            将MutexList的元素复制到新数组中
+            </summary>
+            <returns>一个数组，它包含MutexList的元素的副本</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.GetEnumerator">
+            <summary>
+             返回循环访问MutexList 的枚举数
+            </summary>
+            <returns>返回循环访问MutexList 的枚举数</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            返回一个循环访问集合的枚举数
+            </summary>
+            <returns>可用于循环访问集合的 System.Collections.IEnumerator 对象</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.Dequeue">
+            <summary>
+            移除并返回位于MutexList开始处的对象
+            </summary>
+            <returns>从MutexList的开头移除的对象。</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.Enqueue(`0)">
+            <summary>
+            将对象添加到MutexList 的结尾处。
+            </summary>
+            <param name="item">要添加到MutexList的对象</param>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.CompareDinosByAscendingUnitLength(BJMT.Collections.ThreadSafetyList{`0}.complex,BJMT.Collections.ThreadSafetyList{`0}.complex)">
+            <summary>
+            按长度升序比较元素时要使用的方法 
+            </summary>
+            <param name="comX">要比较的元素X</param>
+            <param name="comY">要比较的元素Y</param>
+            <returns>1:comX大于comY; 0:comX等于comY; -1:comX小于comY;</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.CompareDinosByDescendingUnitLength(BJMT.Collections.ThreadSafetyList{`0}.complex,BJMT.Collections.ThreadSafetyList{`0}.complex)">
+            <summary>
+            按长度降序比较元素时要使用的方法 
+            </summary>
+            <param name="comX">要比较的元素X</param>
+            <param name="comY">要比较的元素Y</param>
+            <returns>1:comX大于comY; 0:comX等于comY; -1:comX小于comY;</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.CompareDinosByAscending(BJMT.Collections.ThreadSafetyList{`0}.complex,BJMT.Collections.ThreadSafetyList{`0}.complex)">
+            <summary>
+            按升序方法比较元素时要使用的方法
+            </summary>
+            <param name="comX">要比较的元素X</param>
+            <param name="comY">要比较的元素Y</param>
+            <returns>1:comX大于comY; 0:comX等于comY; -1:comX小于comY;</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.CompareDinosByDescending(BJMT.Collections.ThreadSafetyList{`0}.complex,BJMT.Collections.ThreadSafetyList{`0}.complex)">
+            <summary>
+            按降序方法比较元素时要使用的方法
+            </summary>
+            <param name="comX">要比较的元素X</param>
+            <param name="comY">要比较的元素Y</param>
+            <returns>-1:comX大于comY; 0:comX等于comY; 1:comX小于comY;</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.Sort(System.String,BJMT.Collections.ListSortOrder)">
+            <summary>
+            按照链表元素中指定的字段的内容和顺序进行排序,
+            </summary>
+            <param name="conditionStr">要进行排序的字段名,如"Name"表示按元素中Name字段内容排序;
+            若有多个字段,中间用','分隔,如"Name,Age"表示按元素中Name和Age字段排序</param>
+            <param name="order">指定链表的排序顺序</param>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.AddQueue(System.Collections.Queue)">
+            <summary>
+            将与链表元素相同的队列中的元素,依次添加到互斥链表
+            </summary>
+            <param name="q">与链表元素相同的队列</param>
+            <returns>成功为true;否则为false</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.System#Collections#IList#Add(System.Object)">
+            <summary>
+            将某项添加到 System.Collections.IList 中。
+            </summary>
+            <param name="value">要添加到 System.Collections.IList 的 System.Object。</param>
+            <returns>新元素的插入位置</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.System#Collections#IList#Contains(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.System#Collections#IList#IndexOf(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.System#Collections#IList#Insert(System.Int32,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.System#Collections#IList#Remove(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="P:BJMT.Collections.ThreadSafetyList`1.Capacity">
+            <summary>
+            获取或设置该内部数据结构在不调整大小的情况下能够保存的元素总数
+            </summary>
+        </member>
+        <member name="P:BJMT.Collections.ThreadSafetyList`1.Count">
+            <summary>
+            获取MutexList中实际包含的元素数
+            </summary>
+        </member>
+        <member name="P:BJMT.Collections.ThreadSafetyList`1.Item(System.Int32)">
+            <summary>
+            获取或设置指定索引处的元素。
+            </summary>
+            <param name="index"> 要获得或设置的元素从零开始的索引。</param>
+            <returns></returns>
+        </member>
+        <member name="P:BJMT.Collections.ThreadSafetyList`1.IsReadOnly">
+            <summary>
+            获取一个值，该值指示本集合是否为只读。
+            </summary>
+        </member>
+        <member name="P:BJMT.Collections.ThreadSafetyList`1.IsFixedSize">
+            <summary>
+            获取一个值，该值指示 System.Collections.IList 是否具有固定大小。
+            如果 System.Collections.IList 具有固定大小，则为 true；否则为 false。
+            </summary>
+        </member>
+        <member name="P:BJMT.Collections.ThreadSafetyList`1.IsSynchronized">
+            <summary>
+            获取一个值，该值指示是否同步对 System.Collections.ICollection 的访问（线程安全）。
+            </summary>
+        </member>
+        <member name="P:BJMT.Collections.ThreadSafetyList`1.SyncRoot">
+            <summary>
+            获取可用于同步 System.Collections.ICollection 访问的对象。
+            </summary>
+        </member>
+        <member name="T:BJMT.Collections.ThreadSafetyList`1.finish">
+            <summary>
+            枚举过程中跳出枚举的通知委托
+            </summary>
+        </member>
+        <member name="T:BJMT.Collections.ThreadSafetyList`1.__Enumerator1">
+            <summary>
+            重载枚举接口(支持在泛型集合上进行简单迭代),实现在枚举过程中break时释放互斥
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ThreadSafetyList`1.__Enumerator1.__state">
+            <summary>
+            当前状态
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ThreadSafetyList`1.__Enumerator1.__current">
+            <summary>
+            当前枚举到的成员
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ThreadSafetyList`1.__Enumerator1.__this">
+            <summary>
+            MutexList类实例
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ThreadSafetyList`1.__Enumerator1.i">
+            <summary>
+            枚举的索引
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ThreadSafetyList`1.__Enumerator1.Components">
+            <summary>
+            Other managed resource this class uses.
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ThreadSafetyList`1.__Enumerator1.disposed">
+            <summary>
+            Track whether Dispose has been called.
+            </summary>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.__Enumerator1.#ctor(BJMT.Collections.ThreadSafetyList{`0})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="__this">MutexList类对象</param>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.__Enumerator1.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.__Enumerator1.MoveNext">
+            <summary>
+            将枚举数推进到集合的下一个元素
+            </summary>
+            <returns>如果枚举数成功地推进到下一个元素，则为 true；如果枚举数越过集合的结尾，则为 false</returns>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.__Enumerator1.Dispose">
+            <summary>
+            释放使用资源
+            </summary>
+        </member>
+        <member name="M:BJMT.Collections.ThreadSafetyList`1.__Enumerator1.Reset">
+            <summary>
+            将枚举数设置为其初始位置，该位置位于集合中第一个元素之前
+            </summary>
+        </member>
+        <member name="E:BJMT.Collections.ThreadSafetyList`1.__Enumerator1.OnFinish">
+            <summary>
+            枚举过程中跳出枚举的事件
+            </summary>
+        </member>
+        <member name="P:BJMT.Collections.ThreadSafetyList`1.__Enumerator1.Current">
+            <summary>
+            获取集合中位于枚举数当前位置的元素
+            </summary>
+        </member>
+        <member name="P:BJMT.Collections.ThreadSafetyList`1.__Enumerator1.System#Collections#IEnumerator#Current">
+            <summary>
+            获取集合中的当前元素
+            </summary>
+        </member>
+        <member name="T:BJMT.Collections.ThreadSafetyList`1.complex">
+            <summary>
+            链表排序时使用结构,将要比较的字段放在Comstr中.
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ThreadSafetyList`1.complex.compstr">
+            <summary>
+            要比较的字符串,从T中提出
+            </summary>
+        </member>
+        <member name="F:BJMT.Collections.ThreadSafetyList`1.complex.t">
+            <summary>
+            实际链表节点元素
+            </summary>
+        </member>
+    </members>
+</doc>

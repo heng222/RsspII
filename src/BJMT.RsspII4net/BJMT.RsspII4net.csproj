@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3E70451D-FA44-4705-B258-C0B8F5DB0692}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BJMT.RsspII4net</RootNamespace>
+    <AssemblyName>BJMT.RsspII4net</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\Debug\BJMT.RsspII4net.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\Release\BJMT.RsspII4net.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>..\bin\Debug\BJMT.RsspII4net.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\BJMT.RsspII4net.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>..\bin\Release\BJMT.RsspII4net.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\BJMT.RsspII4net.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ALE\AleConnection.cs" />
+    <Compile Include="ALE\AleConnectionClient.cs" />
+    <Compile Include="ALE\State\AleState.cs" />
+    <Compile Include="ALE\State\AleConnectedState.cs" />
+    <Compile Include="ALE\State\AleDisconnectedState.cs" />
+    <Compile Include="ALE\State\AleWaitingForCcState.cs" />
+    <Compile Include="ALE\State\AleWaitingForCrState.cs" />
+    <Compile Include="ALE\State\IAleStateContext.cs" />
+    <Compile Include="ALE\AleConnectionServer.cs" />
+    <Compile Include="Events\CacheDelayEventArgs.cs" />
+    <Compile Include="Exceptions\MaslErrorCode.cs" />
+    <Compile Include="Exceptions\MaslException.cs" />
+    <Compile Include="Exceptions\AuthenticationKeyMissingException.cs" />
+    <Compile Include="Exceptions\SafetyFeatureNotSupportedException.cs" />
+    <Compile Include="Exceptions\MacInDtException.cs" />
+    <Compile Include="Exceptions\MacInAu2Exception.cs" />
+    <Compile Include="Exceptions\MacInAu3Exception.cs" />
+    <Compile Include="Exceptions\SequenceIntegrityException.cs" />
+    <Compile Include="Exceptions\MacInArException.cs" />
+    <Compile Include="Exceptions\DirectionFlagException.cs" />
+    <Compile Include="Exceptions\WaitingArTimeoutException.cs" />
+    <Compile Include="Exceptions\IdentifyInAu2Exception.cs" />
+    <Compile Include="Exceptions\NotAu2ObtainedAfterAu1Exception.cs" />
+    <Compile Include="Exceptions\NotAu3ObtainedAfterAu2Exception.cs" />
+    <Compile Include="Exceptions\NotArObtainedAfterAu3Exception.cs" />
+    <Compile Include="Exceptions\Au1LengthException.cs" />
+    <Compile Include="Exceptions\Au2LengthException.cs" />
+    <Compile Include="Exceptions\Au3LengthException.cs" />
+    <Compile Include="Exceptions\ArLengthException.cs" />
+    <Compile Include="Exceptions\DtLengthException.cs" />
+    <Compile Include="INodeListenerObserver.cs" />
+    <Compile Include="Config\RsspConfig.cs" />
+    <Compile Include="Infrastructure\RsspEndPoint.cs" />
+    <Compile Include="Infrastructure\Services\IAleConnectionObserver.cs" />
+    <Compile Include="ALE\IO\IAleTunnelObserver.cs" />
+    <Compile Include="Config\RsspClientConfig.cs" />
+    <Compile Include="Config\RsspServerConfig.cs" />
+    <Compile Include="Config\RsspTcpLinkConfig.cs" />
+    <Compile Include="ALE\Frames\AleFrame.cs" />
+    <Compile Include="ALE\Frames\AleFrameType.cs" />
+    <Compile Include="ALE\Frames\AleStreamParser.cs" />
+    <Compile Include="ALE\Frames\UserData\AleKeepAliveOnActiveLink.cs" />
+    <Compile Include="ALE\Frames\UserData\AleKeepAliveOnNonActiveLink.cs" />
+    <Compile Include="ALE\Frames\UserData\AleSwitchN2R.cs" />
+    <Compile Include="ALE\Frames\UserData\AleSwitchR2N.cs" />
+    <Compile Include="ALE\Frames\UserData\AleUserData.cs" />
+    <Compile Include="ALE\Frames\UserData\AleConnectionConfirm.cs" />
+    <Compile Include="ALE\Frames\UserData\AleConnectionRequest.cs" />
+    <Compile Include="ALE\Frames\UserData\AleDataTransmission.cs" />
+    <Compile Include="ALE\Frames\UserData\AleDisconnect.cs" />
+    <Compile Include="ALE\IO\AleTunnel.cs" />
+    <Compile Include="ALE\IO\AleClientTunnel.cs" />
+    <Compile Include="ALE\IO\AleServerTunnel.cs" />
+    <Compile Include="Controls\CacheCountControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CacheCountControl.designer.cs">
+      <DependentUpon>CacheCountControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FilterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FilterControl.designer.cs">
+      <DependentUpon>FilterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IFilterControlProvider.cs" />
+    <Compile Include="Controls\IRsspNodeNameResolver.cs" />
+    <Compile Include="Controls\IRsspUserDataResolver.cs" />
+    <Compile Include="Controls\RsspMonitorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RsspMonitorControl.designer.cs">
+      <DependentUpon>RsspMonitorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\LogCreatedEventArgs.cs" />
+    <Compile Include="Events\NodeConnectedEventArgs.cs" />
+    <Compile Include="Events\NodeInterruptionEventArgs.cs" />
+    <Compile Include="Events\CacheCountChangedEventArgs.cs" />
+    <Compile Include="Events\TcpConnectedEventArgs.cs" />
+    <Compile Include="Events\TcpConnectFailedEventArgs.cs" />
+    <Compile Include="Events\TcpConnectingEventArgs.cs" />
+    <Compile Include="Events\TcpDisconnectedEventArgs.cs" />
+    <Compile Include="Events\TcpEndPointListenFailedEventArgs.cs" />
+    <Compile Include="Events\TcpEndPointListeningEventArgs.cs" />
+    <Compile Include="Events\TcpEventArgs.cs" />
+    <Compile Include="Events\UserDataOutgoingEventArgs.cs" />
+    <Compile Include="Events\UserDataIncomingEventArgs.cs" />
+    <Compile Include="Exceptions\AleFrameParsingException.cs" />
+    <Compile Include="Exceptions\SaiFrameParsingException.cs" />
+    <Compile Include="Exceptions\MaslFrameParsingException.cs" />
+    <Compile Include="Infrastructure\EncryptionAlgorithm.cs" />
+    <Compile Include="Infrastructure\MessageDelayDefenseTech.cs" />
+    <Compile Include="Infrastructure\IncomingPackage.cs" />
+    <Compile Include="Infrastructure\OutgoingPackage.cs" />
+    <Compile Include="Infrastructure\ServiceType.cs" />
+    <Compile Include="IRsspNode.cs" />
+    <Compile Include="MASL\AuMessageBuilder.cs" />
+    <Compile Include="MASL\IMacCalculator.cs" />
+    <Compile Include="MASL\Frames\MaslArFrame.cs" />
+    <Compile Include="MASL\Frames\MaslAu1Frame.cs" />
+    <Compile Include="MASL\Frames\MaslAu2Frame.cs" />
+    <Compile Include="MASL\Frames\MaslAu3Frame.cs" />
+    <Compile Include="MASL\Frames\MaslDiFrame.cs" />
+    <Compile Include="MASL\Frames\MaslDtFrame.cs" />
+    <Compile Include="MASL\Frames\MaslFrame.cs" />
+    <Compile Include="MASL\Frames\MaslFrameDirection.cs" />
+    <Compile Include="MASL\Frames\MaslFrameType.cs" />
+    <Compile Include="Infrastructure\Services\IMaslConnectionObserver.cs" />
+    <Compile Include="MASL\MaslConnection.cs" />
+    <Compile Include="MASL\MaslConnectionClient.cs" />
+    <Compile Include="MASL\State\IMaslStateContext.cs" />
+    <Compile Include="MASL\State\MaslConnectedState.cs" />
+    <Compile Include="MASL\State\MaslState.cs" />
+    <Compile Include="MASL\State\MaslWaitingforArState.cs" />
+    <Compile Include="MASL\State\MaslWaitingforAu1State.cs" />
+    <Compile Include="MASL\State\MaslWaitingforAu2State.cs" />
+    <Compile Include="MASL\State\MaslWaitingforAu3State.cs" />
+    <Compile Include="MASL\MaslConnectionServer.cs" />
+    <Compile Include="NodeListener.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RsspFactory.cs" />
+    <Compile Include="RsspNode.cs" />
+    <Compile Include="RsspNodeClient.cs" />
+    <Compile Include="RsspNodeServer.cs" />
+    <Compile Include="SAI\Events\SaiFrameIncomingEventArgs.cs" />
+    <Compile Include="SAI\ISaiFrameTransport.cs" />
+    <Compile Include="SAI\DefenseStrategy.cs" />
+    <Compile Include="SAI\EC\EcCounter.cs" />
+    <Compile Include="SAI\EC\EcDefenseStrategy.cs" />
+    <Compile Include="SAI\EC\Frames\SaiEcFrame.cs" />
+    <Compile Include="SAI\EC\State\EcDisconnectedState.cs" />
+    <Compile Include="SAI\EC\State\EcConnectedState.cs" />
+    <Compile Include="SAI\EC\State\EcState.cs" />
+    <Compile Include="SAI\EC\State\EcWaitingforStart1State.cs" />
+    <Compile Include="SAI\EC\State\EcWaitingforStart2State.cs" />
+    <Compile Include="SAI\ISaiStateContext.cs" />
+    <Compile Include="SAI\SaiConnectionClient.cs" />
+    <Compile Include="SAI\SaiConnectionServer.cs" />
+    <Compile Include="SAI\SaiInvalidState.cs" />
+    <Compile Include="SAI\SaiFrame.cs" />
+    <Compile Include="SAI\EC\Frames\SaiEcFrameAcknowlegment.cs" />
+    <Compile Include="SAI\EC\Frames\SaiEcFrameApplication.cs" />
+    <Compile Include="SAI\EC\Frames\SaiEcFrameAskForAck.cs" />
+    <Compile Include="SAI\EC\Frames\SaiEcFrameStart.cs" />
+    <Compile Include="SAI\SaiState.cs" />
+    <Compile Include="SAI\TTS\TimeOffsetUpdater.cs" />
+    <Compile Include="SAI\TTS\TimeOffsetCalculator.cs" />
+    <Compile Include="SAI\TTS\Frames\SaiTtsFrameAppData.cs" />
+    <Compile Include="SAI\TTS\Frames\SaiTtsFrameEstimate.cs" />
+    <Compile Include="SAI\TTS\Frames\SaiTtsFrameOffsetEnd.cs" />
+    <Compile Include="SAI\TTS\Frames\SaiTtsFrameOffsetStart.cs" />
+    <Compile Include="SAI\TTS\Frames\SaiTtsFrameOffsetAnswer1.cs" />
+    <Compile Include="SAI\TTS\Frames\SaiTtsFrameOffsetAnswer2.cs" />
+    <Compile Include="SAI\TTS\Frames\SaiTtsFrame.cs" />
+    <Compile Include="Infrastructure\Services\ISaiConnectionObserver.cs" />
+    <Compile Include="SAI\SaiConnection.cs" />
+    <Compile Include="SAI\SaiFrameType.cs" />
+    <Compile Include="Infrastructure\Services\IAuMessageProvider.cs" />
+    <Compile Include="Infrastructure\Services\IAleTunnelEventNotifier.cs" />
+    <Compile Include="SAI\TTS\ITripleTimestampObserver.cs" />
+    <Compile Include="SAI\TTS\State\TtsState.cs" />
+    <Compile Include="SAI\TTS\State\TtsConnectedState.cs" />
+    <Compile Include="SAI\TTS\State\TtsDisconnectedState.cs" />
+    <Compile Include="SAI\TTS\State\TtsWaitingforStartState.cs" />
+    <Compile Include="SAI\TTS\State\TtsWaitingforAnswer1State.cs" />
+    <Compile Include="SAI\TTS\State\TtsWaitingforAnswer2State.cs" />
+    <Compile Include="SAI\TTS\State\TtsWaitingforEstimateState.cs" />
+    <Compile Include="SAI\TTS\State\TtsWaitingforEndState.cs" />
+    <Compile Include="SAI\TTS\TripleTimestamp.cs" />
+    <Compile Include="SAI\TTS\TtsDefenseStrategy.cs" />
+    <Compile Include="Utilities\ArrayHelper.cs" />
+    <Compile Include="Utilities\HandshakeTimeoutManager.cs" />
+    <Compile Include="Utilities\HelperTools.cs" />
+    <Compile Include="Utilities\LogUtility.cs" />
+    <Compile Include="MASL\MAC\TrippleDesMacCalculator.cs" />
+    <Compile Include="Utilities\ProductCache.cs" />
+    <Compile Include="Utilities\ProductCreatedEventArgs.cs" />
+    <Compile Include="Utilities\SeqNoManager.cs" />
+    <Compile Include="Utilities\ThreadSafetyList.cs" />
+    <Compile Include="Utilities\CrcTool.cs" />
+    <Compile Include="Utilities\RsspEncoding.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AssemblyInfo.tpl" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\CacheCountControl.resx">
+      <DependentUpon>CacheCountControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FilterControl.resx">
+      <DependentUpon>FilterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RsspMonitorControl.resx">
+      <DependentUpon>RsspMonitorControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if "$(ConfigurationName)"=="Release" (SubWcRev "$(ProjectDir)\" "$(ProjectDir)Properties\AssemblyInfo.tpl" "$(ProjectDir)Properties\AssemblyInfo.cs")</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

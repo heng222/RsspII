@@ -1,0 +1,1699 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BJMT.Log</name>
+    </assembly>
+    <members>
+        <member name="T:BJMT.Log.Impl.Hierarchy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.LogLevelChangedEventArgs">
+            <summary>
+            日志级别改变事件参数类
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.LogLevelChangedEventArgs.#ctor(BJMT.Log.LogLevel,BJMT.Log.LogLevel)">
+            <summary>
+            构造一个日志级别必变事件参数类
+            </summary>
+            <param name="preLevel">事件发生前的日志级别</param>
+            <param name="currentLevel">事件发生后的日志级别</param>
+        </member>
+        <member name="P:BJMT.Log.LogLevelChangedEventArgs.PreLevel">
+            <summary>
+            获取/设置事件发生前的日志级别
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogLevelChangedEventArgs.CurrentLevel">
+            <summary>
+            获取/设置当前的日志级别
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.Impl.TraceLogger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.ILog">
+            <summary>
+            日志记录器接口
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.ILog.Debug(System.Object)">
+            <summary>
+            记录调试信息
+            </summary>
+            <param id="message">消息对象</param>
+        </member>
+        <member name="M:BJMT.Log.ILog.Debug(System.Object,System.Exception)">
+            <summary>
+            记录调试信息. 
+            </summary>
+            <param id="message">消息对象</param>
+            <param id="exception">异常</param>
+        </member>
+        <member name="M:BJMT.Log.ILog.DebugFormat(System.String,System.Object[])">
+            <summary>
+            记录调试信息.
+            </summary>
+            <param id="format">消息格式</param>
+            <param id="args">消息格式化的参数数组</param>
+        </member>
+        <member name="M:BJMT.Log.ILog.Info(System.Object)">
+            <summary>
+            记录信息
+            </summary>
+            <param id="message">消息</param>
+        </member>
+        <member name="M:BJMT.Log.ILog.Info(System.Object,System.Exception)">
+            <summary>
+            记录信息 
+            </summary>
+            <param id="message">消息</param>
+            <param id="exception">异常</param>
+        </member>
+        <member name="M:BJMT.Log.ILog.InfoFormat(System.String,System.Object[])">
+            <summary>
+            记录信息
+            </summary>
+            <param id="format">消息格式</param>
+            <param id="args">消息格式化的参数数组</param>
+        </member>
+        <member name="M:BJMT.Log.ILog.Warn(System.Object)">
+            <summary>
+            记录警告信息
+            </summary>
+            <param id="message">消息</param>
+        </member>
+        <member name="M:BJMT.Log.ILog.Warn(System.Object,System.Exception)">
+            <summary>
+            记录警告信息 
+            </summary>
+            <param id="message">消息</param>
+            <param id="exception">异常</param>
+        </member>
+        <member name="M:BJMT.Log.ILog.WarnFormat(System.String,System.Object[])">
+            <summary>
+            记录警告信息
+            </summary>
+            <param id="format">消息格式</param>
+            <param id="args">消息格式化的参数数组</param>
+        </member>
+        <member name="M:BJMT.Log.ILog.Error(System.Object)">
+            <summary>
+            记录错误信息
+            </summary>
+            <param id="message">消息</param>
+        </member>
+        <member name="M:BJMT.Log.ILog.Error(System.Object,System.Exception)">
+            <summary>
+            记录错误信息 
+            </summary>
+            <param id="message">消息</param>
+            <param id="exception">异常</param>
+        </member>
+        <member name="M:BJMT.Log.ILog.ErrorFormat(System.String,System.Object[])">
+            <summary>
+            记录错误信息
+            </summary>
+            <param id="format">消息格式</param>
+            <param id="args">消息格式化的参数数组</param>
+        </member>
+        <member name="M:BJMT.Log.ILog.Fatal(System.Object)">
+            <summary>
+            记录致命错误信息
+            </summary>
+            <param id="message">消息</param>
+        </member>
+        <member name="M:BJMT.Log.ILog.Fatal(System.Object,System.Exception)">
+            <summary>
+            记录致命错误信息
+            </summary>
+            <param id="message">消息</param>
+            <param id="exception">异常</param>
+        </member>
+        <member name="M:BJMT.Log.ILog.FatalFormat(System.String,System.Object[])">
+            <summary>
+            记录致命错误信息
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="P:BJMT.Log.ILog.Name">
+            <summary>
+            获取日志名称
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.ILog.LogLevel">
+            <summary>
+            获取/设置日志的保存级别
+            </summary>
+        </member>
+        <member name="E:BJMT.Log.ILog.LogLevelChanged">
+            <summary>
+            一个事件，当日志级别发生变化时引发。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.ILog.IsDebugEnabled">
+            <summary>
+            判断消息的优先级是否可以进行记录调试信息.
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.ILog.IsInfoEnabled">
+            <summary>
+            判断消息的优先级是否可以进行记录信息.
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.ILog.IsWarnEnabled">
+            <summary>
+            判断消息的优先级是否可以进行记录警告信息.
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.ILog.IsErrorEnabled">
+            <summary>
+            判断消息的优先级是否可以进行记录错误信息.
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.ILog.IsFatalEnabled">
+            <summary>
+            判断消息的优先级是否可以进行记录致命错误信息.
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Impl.TraceLogger.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Impl.TraceLogger.Debug(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BJMT.Log.Impl.TraceLogger.DebugFormat(System.String,System.Object[])">
+            <summary>
+            
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:BJMT.Log.Impl.TraceLogger.Info(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BJMT.Log.Impl.TraceLogger.InfoFormat(System.String,System.Object[])">
+            <summary>
+            
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:BJMT.Log.Impl.TraceLogger.Warn(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="P:BJMT.Log.Impl.TraceLogger.Name">
+            <summary>
+            获取日志名称
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.Impl.TraceLogger.LogLevel">
+            <summary>
+            获取/设置日志的保存级别
+            </summary>
+        </member>
+        <member name="E:BJMT.Log.Impl.TraceLogger.LogCreated">
+            <summary>
+            一个事件，当日志被创建时引发。
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.Properties.Resource">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.Properties.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.Properties.Resource.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.Impl.BJMTLogAppender">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTLogAppender.SetLogLevel(log4net.Core.LoggingEvent,BJMT.Log.LogEntity)">
+            <summary>
+            
+            </summary>
+            <param name="loggingEvent"></param>
+            <param name="entity"></param>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTLogAppender.DoAppend(log4net.Core.LoggingEvent)">
+            <summary>
+            
+            </summary>
+            <param name="loggingEvent"></param>
+        </member>
+        <member name="P:BJMT.Log.Impl.BJMTLogAppender.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.Impl.TraceLogManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.ILogManager">
+            <summary>
+            日志管理器接口
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.ILogManager.GetLogger(System.String)">
+            <summary>
+            得到日志器
+            </summary>
+            <param name="name">日志名称</param>
+            <returns>返回一个日志记录器接口</returns>
+        </member>
+        <member name="M:BJMT.Log.ILogManager.GetCurrentLoggers">
+            <summary>
+            获取当前定义的所有日志接口
+            </summary>
+            <returns>所有日志接口</returns>
+        </member>
+        <member name="M:BJMT.Log.ILogManager.Flush">
+            <summary>
+            清理当前缓冲区，使所有日志数据写入基础设备。
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.ILogManager.ActivateOptions">
+            <summary>
+            Initialize the appender based on the options set.
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.ILogManager.Shutdown">
+            <summary>
+            关闭日志管理器
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.ILogManager.Header">
+            <summary>
+            获取/设置日志头部。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.ILogManager.Footer">
+            <summary>
+            获取/设置日志尾部。
+            </summary>
+        </member>
+        <member name="E:BJMT.Log.ILogManager.LogCreated">
+            <summary>
+            一个事件，当日志被创建时引发。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.Impl.TraceLogManager.Header">
+            <summary>
+            获取/设置日志头部。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.Impl.TraceLogManager.Footer">
+            <summary>
+            获取/设置日志尾部。
+            </summary>
+        </member>
+        <member name="E:BJMT.Log.Impl.TraceLogManager.LogCreated">
+            <summary>
+            一个事件，当日志被创建时引发。
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.LogEntity">
+            <summary>
+            日志实体类
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogEntity.TimeStamp">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogEntity.ThreadName">
+            <summary>
+            线程名称。当没有设置名称时，表示线程ID。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogEntity.LoggerName">
+            <summary>
+            日志类别
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogEntity.Level">
+            <summary>
+            日志级别
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogEntity.Content">
+            <summary>
+            日志内容
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.Impl.BJMTLogManager">
+            <summary>
+            日志管理器
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTLogManager.#ctor(System.String)">
+            <summary>
+            构造一个ATS日志管理器
+            </summary>
+            <param name="log4NetCfgFilePathName">log4Net库所需要的配置文件路径名称，例如：@".\Addins\Log\prefs.xml"</param>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTLogManager.RepositorySelector_LoggerRepositoryCreatedEvent(System.Object,log4net.Core.LoggerRepositoryCreationEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTLogManager.GetFilePaths">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTLogManager.GetLogger(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTLogManager.Shutdown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTLogManager.GetCurrentLoggers">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTLogManager.Flush">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.Impl.BJMTLogManager.Header">
+            <summary>
+            获取/设置日志头部。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.Impl.BJMTLogManager.Footer">
+            <summary>
+            获取/设置日志尾部。
+            </summary>
+        </member>
+        <member name="E:BJMT.Log.Impl.BJMTLogManager.LogCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.Impl.BJMTLoggerFactory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BJMT.Log.Impl.BJMTRollingFileAppender"/> class.
+            </summary>
+            <remarks>
+            <para>
+            Default constructor.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.Finalize">
+            <summary>
+            Cleans up all resources used by this appender.
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.declaringType">
+            <summary>
+            The fully qualified type of the RollingFileAppender class.
+            </summary>
+            <remarks>
+            Used by the internal logger to record the Type of the
+            log message.
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.SetQWForFiles(System.IO.TextWriter)">
+            <summary>
+            Sets the quiet writer being used.
+            </summary>
+            <remarks>
+            This method can be overridden by sub classes.
+            </remarks>
+            <param name="writer">the writer to set</param>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.Append(log4net.Core.LoggingEvent)">
+            <summary>
+            Write out a logging event.
+            </summary>
+            <param name="loggingEvent">the event to write to file.</param>
+            <remarks>
+            <para>
+            Handles append time behavior for RollingFileAppender.  This checks
+            if a roll over either by date (checked first) or time (checked second)
+            is need and then appends to the file last.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.Append(log4net.Core.LoggingEvent[])">
+            <summary>
+            Write out an array of logging events.
+            </summary>
+            <param name="loggingEvents">the events to write to file.</param>
+            <remarks>
+            <para>
+            Handles append time behavior for RollingFileAppender.  This checks
+            if a roll over either by date (checked first) or time (checked second)
+            is need and then appends to the file last.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.AdjustFileBeforeAppend">
+            <summary>
+            Performs any required rolling before outputting the next event
+            </summary>
+            <remarks>
+            <para>
+            Handles append time behavior for RollingFileAppender.  This checks
+            if a roll over either by date (checked first) or time (checked second)
+            is need and then appends to the file last.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.OpenFile(System.String,System.Boolean)">
+            <summary>
+            Creates and opens the file for logging.  If <see cref="P:BJMT.Log.Impl.BJMTRollingFileAppender.StaticLogFileName"/>
+            is false then the fully qualified name is determined and used.
+            </summary>
+            <param name="fileName">the name of the file to open</param>
+            <param name="append">true to append to existing file</param>
+            <remarks>
+            <para>This method will ensure that the directory structure
+            for the <paramref name="fileName"/> specified exists.</para>
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.GetNextOutputFileName(System.String)">
+            <summary>
+            Get the current output file name
+            </summary>
+            <param name="fileName">the base file name</param>
+            <returns>the output file name</returns>
+            <remarks>
+            The output file name is based on the base fileName specified.
+            If <see cref="P:BJMT.Log.Impl.BJMTRollingFileAppender.StaticLogFileName"/> is set then the output 
+            file name is the same as the base file passed in. Otherwise
+            the output file depends on the date pattern, on the count
+            direction or both.
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.DetermineCurSizeRollBackups">
+            <summary>
+            Determines curSizeRollBackups (only within the current roll point)
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.GetWildcardPatternForFile(System.String)">
+            <summary>
+            Generates a wildcard pattern that can be used to find all files
+            that are similar to the base file name.
+            </summary>
+            <param name="baseFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.GetExistingFiles(System.String)">
+            <summary>
+            Builds a list of filenames for all files matching the base filename plus a file
+            pattern.
+            </summary>
+            <param name="baseFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.RollOverIfDateBoundaryCrossing">
+            <summary>
+            Initiates a roll over if needed for crossing a date boundary since the last run.
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.ExistingInit">
+            <summary>
+            Initializes based on existing conditions at time of <see cref="M:BJMT.Log.Impl.BJMTRollingFileAppender.ActivateOptions"/>.
+            </summary>
+            <remarks>
+            <para>
+            Initializes based on existing conditions at time of <see cref="M:BJMT.Log.Impl.BJMTRollingFileAppender.ActivateOptions"/>.
+            The following is done
+            <list type="bullet">
+            <item>determine curSizeRollBackups (only within the current roll point)</item>
+            <item>initiates a roll over if needed for crossing a date boundary since the last run.</item>
+            </list>
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.InitializeFromOneFile(System.String,System.String)">
+            <summary>
+            Does the work of bumping the 'current' file counter higher
+            to the highest count when an incremental file name is seen.
+            The highest count is either the first file (when count direction
+            is greater than 0) or the last file (when count direction less than 0).
+            In either case, we want to know the highest count that is present.
+            </summary>
+            <param name="baseFile"></param>
+            <param name="curFileName"></param>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.GetBackUpIndex(System.String)">
+            <summary>
+            Attempts to extract a number from the end of the file name that indicates
+            the number of the times the file has been rolled over.
+            </summary>
+            <remarks>
+            Certain date pattern extensions like yyyyMMdd will be parsed as valid backup indexes.
+            </remarks>
+            <param name="curFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.InitializeRollBackups(System.String,System.Collections.ArrayList)">
+            <summary>
+            Takes a list of files and a base file name, and looks for 
+            'incremented' versions of the base file.  Bumps the max
+            count up to the highest count seen.
+            </summary>
+            <param name="baseFile"></param>
+            <param name="arrayFiles"></param>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.ComputeCheckPeriod(System.String)">
+            <summary>
+            Calculates the RollPoint for the datePattern supplied.
+            </summary>
+            <param name="datePattern">the date pattern to calculate the check period for</param>
+            <returns>The RollPoint that is most accurate for the date pattern supplied</returns>
+            <remarks>
+            Essentially the date pattern is examined to determine what the
+            most suitable roll point is. The roll point chosen is the roll point
+            with the smallest period that can be detected using the date pattern
+            supplied. i.e. if the date pattern only outputs the year, month, day 
+            and hour then the smallest roll point that can be detected would be
+            and hourly roll point as minutes could not be detected.
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.ActivateOptions">
+            <summary>
+            Initialize the appender based on the options set
+            </summary>
+            <remarks>
+            <para>
+            This is part of the <see cref="T:log4net.Core.IOptionHandler"/> delayed object
+            activation scheme. The <see cref="M:BJMT.Log.Impl.BJMTRollingFileAppender.ActivateOptions"/> method must 
+            be called on this object after the configuration properties have
+            been set. Until <see cref="M:BJMT.Log.Impl.BJMTRollingFileAppender.ActivateOptions"/> is called this
+            object is in an undefined state and must not be used. 
+            </para>
+            <para>
+            If any of the configuration properties are modified then 
+            <see cref="M:BJMT.Log.Impl.BJMTRollingFileAppender.ActivateOptions"/> must be called again.
+            </para>
+            <para>
+            Sets initial conditions including date/time roll over information, first check,
+            scheduledFilename, and calls <see cref="M:BJMT.Log.Impl.BJMTRollingFileAppender.ExistingInit"/> to initialize
+            the current number of backups.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.CombinePath(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path1"></param>
+            <param name="path2">.1, .2, .3, etc.</param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.RollOverTime(System.Boolean)">
+            <summary>
+            Rollover the file(s) to date/time tagged file(s).
+            </summary>
+            <param name="fileIsOpen">set to true if the file to be rolled is currently open</param>
+            <remarks>
+            <para>
+            Rollover the file(s) to date/time tagged file(s).
+            Resets curSizeRollBackups. 
+            If fileIsOpen is set then the new file is opened (through SafeOpenFile).
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.RollFile(System.String,System.String)">
+            <summary>
+            Renames file <paramref name="fromFile"/> to file <paramref name="toFile"/>.
+            </summary>
+            <param name="fromFile">Name of existing file to roll.</param>
+            <param name="toFile">New name for file.</param>
+            <remarks>
+            <para>
+            Renames file <paramref name="fromFile"/> to file <paramref name="toFile"/>. It
+            also checks for existence of target file and deletes if it does.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.FileExists(System.String)">
+            <summary>
+            Test if a file exists at a specified path
+            </summary>
+            <param name="path">the path to the file</param>
+            <returns>true if the file exists</returns>
+            <remarks>
+            <para>
+            Test if a file exists at a specified path
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.DeleteFile(System.String)">
+            <summary>
+            Deletes the specified file if it exists.
+            </summary>
+            <param name="fileName">The file to delete.</param>
+            <remarks>
+            <para>
+            Delete a file if is exists.
+            The file is first moved to a new filename then deleted.
+            This allows the file to be removed even when it cannot
+            be deleted, but it still can be moved.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.RollOverSize">
+            <summary>
+            Implements file roll base on file size.
+            </summary>
+            <remarks>
+            <para>
+            If the maximum number of size based backups is reached
+            (<c>curSizeRollBackups == maxSizeRollBackups</c>) then the oldest
+            file is deleted -- its index determined by the sign of countDirection.
+            If <c>countDirection</c> &lt; 0, then files
+            {<c>File.1</c>, ..., <c>File.curSizeRollBackups -1</c>}
+            are renamed to {<c>File.2</c>, ...,
+            <c>File.curSizeRollBackups</c>}. Moreover, <c>File</c> is
+            renamed <c>File.1</c> and closed.
+            </para>
+            <para>
+            A new file is created to receive further log output.
+            </para>
+            <para>
+            If <c>maxSizeRollBackups</c> is equal to zero, then the
+            <c>File</c> is truncated with no backup files created.
+            </para>
+            <para>
+            If <c>maxSizeRollBackups</c> &lt; 0, then <c>File</c> is
+            renamed if needed and no files are deleted.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.RollOverRenameFiles(System.String)">
+            <summary>
+            Implements file roll.
+            </summary>
+            <param name="baseFileName">the base name to rename</param>
+            <remarks>
+            <para>
+            If the maximum number of size based backups is reached
+            (<c>curSizeRollBackups == maxSizeRollBackups</c>) then the oldest
+            file is deleted -- its index determined by the sign of countDirection.
+            If <c>countDirection</c> &lt; 0, then files
+            {<c>File.1</c>, ..., <c>File.curSizeRollBackups -1</c>}
+            are renamed to {<c>File.2</c>, ...,
+            <c>File.curSizeRollBackups</c>}. 
+            </para>
+            <para>
+            If <c>maxSizeRollBackups</c> is equal to zero, then the
+            <c>File</c> is truncated with no backup files created.
+            </para>
+            <para>
+            If <c>maxSizeRollBackups</c> &lt; 0, then <c>File</c> is
+            renamed if needed and no files are deleted.
+            </para>
+            <para>
+            This is called by <see cref="M:BJMT.Log.Impl.BJMTRollingFileAppender.RollOverSize"/> to rename the files.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.NextCheckDate(System.DateTime,BJMT.Log.Impl.BJMTRollingFileAppender.RollPoint)">
+            <summary>
+            Get the start time of the next window for the current rollpoint
+            </summary>
+            <param name="currentDateTime">the current date</param>
+            <param name="rollPoint">the type of roll point we are working with</param>
+            <returns>the start time for the next roll point an interval after the currentDateTime date</returns>
+            <remarks>
+            <para>
+            Returns the date of the next roll point after the currentDateTime date passed to the method.
+            </para>
+            <para>
+            The basic strategy is to subtract the time parts that are less significant
+            than the rollpoint from the current time. This should roll the time back to
+            the start of the time window for the current rollpoint. Then we add 1 window
+            worth of time and get the start time of the next window for the rollpoint.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_dateTime">
+            <summary>
+            This object supplies the current date/time.  Allows test code to plug in
+            a method to control this class when testing date/time based rolling. The default
+            implementation uses the underlying value of DateTime.Now.
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_datePattern">
+            <summary>
+            The date pattern. By default, the pattern is set to <c>".yyyy-MM-dd"</c> 
+            meaning daily rollover.
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_scheduledFilename">
+            <summary>
+            The actual formatted filename that is currently being written to
+            or will be the file transferred to on roll over
+            (based on staticLogFileName).
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_nextCheck">
+            <summary>
+            The timestamp when we shall next recompute the filename.
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_now">
+            <summary>
+            Holds date of last roll over
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_rollPoint">
+            <summary>
+            The type of rolling done
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_maxFileSize">
+            <summary>
+            The default maximum file size is 10MB
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_maxSizeRollBackups">
+            <summary>
+            There is zero backup files by default
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_curSizeRollBackups">
+            <summary>
+            How many sized based backups have been made so far
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_countDirection">
+            <summary>
+            The rolling file count direction. 
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_rollingStyle">
+            <summary>
+            The rolling mode used in this appender.
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_rollDate">
+            <summary>
+            Cache flag set if we are rolling by date.
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_rollSize">
+            <summary>
+            Cache flag set if we are rolling by size.
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_staticLogFileName">
+            <summary>
+            Value indicating whether to always log to the same file.
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_preserveLogFileNameExtension">
+            <summary>
+            Value indicating whether to preserve the file name extension when rolling.
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_baseFileName">
+            <summary>
+            FileName provided in configuration.  Used for rolling properly
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.m_mutexForRolling">
+            <summary>
+            A mutex that is used to lock rolling of files.
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.s_date1970">
+            <summary>
+            The 1st of January 1970 in UTC
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Impl.BJMTRollingFileAppender.IsValidFileName(System.String)">
+            <summary>
+            文件名是否有效。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.Impl.BJMTRollingFileAppender.DateTimeStrategy">
+            <summary>
+            Gets or sets the strategy for determining the current date and time. The default
+            implementation is to use LocalDateTime which internally calls through to DateTime.Now. 
+            DateTime.UtcNow may be used on frameworks newer than .NET 1.0 by specifying
+            <see cref="T:BJMT.Log.Impl.BJMTRollingFileAppender.UniversalDateTime"/>.
+            </summary>
+            <value>
+            An implementation of the <see cref="T:BJMT.Log.Impl.BJMTRollingFileAppender.IDateTime"/> interface which returns the current date and time.
+            </value>
+            <remarks>
+            <para>
+            Gets or sets the <see cref="T:BJMT.Log.Impl.BJMTRollingFileAppender.IDateTime"/> used to return the current date and time.
+            </para>
+            <para>
+            There are two built strategies for determining the current date and time, 
+            <see cref="T:BJMT.Log.Impl.BJMTRollingFileAppender.LocalDateTime"/>
+            and <see cref="T:BJMT.Log.Impl.BJMTRollingFileAppender.UniversalDateTime"/>.
+            </para>
+            <para>
+            The default strategy is <see cref="T:BJMT.Log.Impl.BJMTRollingFileAppender.LocalDateTime"/>.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:BJMT.Log.Impl.BJMTRollingFileAppender.DatePattern">
+            <summary>
+            Gets or sets the date pattern to be used for generating file names
+            when rolling over on date.
+            </summary>
+            <value>
+            The date pattern to be used for generating file names when rolling 
+            over on date.
+            </value>
+            <remarks>
+            <para>
+            Takes a string in the same format as expected by 
+            <see cref="T:log4net.DateFormatter.SimpleDateFormatter"/>.
+            </para>
+            <para>
+            This property determines the rollover schedule when rolling over
+            on date.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:BJMT.Log.Impl.BJMTRollingFileAppender.MaxSizeRollBackups">
+            <summary>
+            Gets or sets the maximum number of backup files that are kept before
+            the oldest is erased.
+            </summary>
+            <value>
+            The maximum number of backup files that are kept before the oldest is
+            erased.
+            </value>
+            <remarks>
+            <para>
+            If set to zero, then there will be no backup files and the log file 
+            will be truncated when it reaches <see cref="P:BJMT.Log.Impl.BJMTRollingFileAppender.MaxFileSize"/>.  
+            </para>
+            <para>
+            If a negative number is supplied then no deletions will be made.  Note 
+            that this could result in very slow performance as a large number of 
+            files are rolled over unless <see cref="P:BJMT.Log.Impl.BJMTRollingFileAppender.CountDirection"/> is used.
+            </para>
+            <para>
+            The maximum applies to <b>each</b> time based group of files and 
+            <b>not</b> the total.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:BJMT.Log.Impl.BJMTRollingFileAppender.MaxFileSize">
+            <summary>
+            Gets or sets the maximum size that the output file is allowed to reach
+            before being rolled over to backup files.
+            </summary>
+            <value>
+            The maximum size in bytes that the output file is allowed to reach before being 
+            rolled over to backup files.
+            </value>
+            <remarks>
+            <para>
+            This property is equivalent to <see cref="P:BJMT.Log.Impl.BJMTRollingFileAppender.MaximumFileSize"/> except
+            that it is required for differentiating the setter taking a
+            <see cref="T:System.Int64"/> argument from the setter taking a <see cref="T:System.String"/> 
+            argument.
+            </para>
+            <para>
+            The default maximum file size is 10MB (10*1024*1024).
+            </para>
+            </remarks>
+        </member>
+        <member name="P:BJMT.Log.Impl.BJMTRollingFileAppender.MaximumFileSize">
+            <summary>
+            Gets or sets the maximum size that the output file is allowed to reach
+            before being rolled over to backup files.
+            </summary>
+            <value>
+            The maximum size that the output file is allowed to reach before being 
+            rolled over to backup files.
+            </value>
+            <remarks>
+            <para>
+            This property allows you to specify the maximum size with the
+            suffixes "KB", "MB" or "GB" so that the size is interpreted being 
+            expressed respectively in kilobytes, megabytes or gigabytes. 
+            </para>
+            <para>
+            For example, the value "10KB" will be interpreted as 10240 bytes.
+            </para>
+            <para>
+            The default maximum file size is 10MB.
+            </para>
+            <para>
+            If you have the option to set the maximum file size programmatically
+            consider using the <see cref="P:BJMT.Log.Impl.BJMTRollingFileAppender.MaxFileSize"/> property instead as this
+            allows you to set the size in bytes as a <see cref="T:System.Int64"/>.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:BJMT.Log.Impl.BJMTRollingFileAppender.CountDirection">
+            <summary>
+            Gets or sets the rolling file count direction. 
+            </summary>
+            <value>
+            The rolling file count direction.
+            </value>
+            <remarks>
+            <para>
+            Indicates if the current file is the lowest numbered file or the
+            highest numbered file.
+            </para>
+            <para>
+            By default newer files have lower numbers (<see cref="P:BJMT.Log.Impl.BJMTRollingFileAppender.CountDirection"/> &lt; 0),
+            i.e. log.1 is most recent, log.5 is the 5th backup, etc...
+            </para>
+            <para>
+            <see cref="P:BJMT.Log.Impl.BJMTRollingFileAppender.CountDirection"/> &gt;= 0 does the opposite i.e.
+            log.1 is the first backup made, log.5 is the 5th backup made, etc.
+            For infinite backups use <see cref="P:BJMT.Log.Impl.BJMTRollingFileAppender.CountDirection"/> &gt;= 0 to reduce 
+            rollover costs.
+            </para>
+            <para>The default file count direction is -1.</para>
+            </remarks>
+        </member>
+        <member name="P:BJMT.Log.Impl.BJMTRollingFileAppender.RollingStyle">
+            <summary>
+            Gets or sets the rolling style.
+            </summary>
+            <value>The rolling style.</value>
+            <remarks>
+            <para>
+            The default rolling style is <see cref="F:BJMT.Log.Impl.BJMTRollingFileAppender.RollingMode.Composite"/>.
+            </para>
+            <para>
+            When set to <see cref="F:BJMT.Log.Impl.BJMTRollingFileAppender.RollingMode.Once"/> this appender's
+            <see cref="P:log4net.Appender.FileAppender.AppendToFile"/> property is set to <c>false</c>, otherwise
+            the appender would append to a single file rather than rolling
+            the file each time it is opened.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:BJMT.Log.Impl.BJMTRollingFileAppender.PreserveLogFileNameExtension">
+            <summary>
+            Gets or sets a value indicating whether to preserve the file name extension when rolling.
+            </summary>
+            <value>
+            <c>true</c> if the file name extension should be preserved.
+            </value>
+            <remarks>
+            <para>
+            By default file.log is rolled to file.log.yyyy-MM-dd or file.log.curSizeRollBackup.
+            However, under Windows the new file name will loose any program associations as the
+            extension is changed. Optionally file.log can be renamed to file.yyyy-MM-dd.log or
+            file.curSizeRollBackup.log to maintain any program associations.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:BJMT.Log.Impl.BJMTRollingFileAppender.StaticLogFileName">
+            <summary>
+            Gets or sets a value indicating whether to always log to
+            the same file.
+            </summary>
+            <value>
+            <c>true</c> if always should be logged to the same file, otherwise <c>false</c>.
+            </value>
+            <remarks>
+            <para>
+            By default file.log is always the current file.  Optionally
+            file.log.yyyy-mm-dd for current formatted datePattern can by the currently
+            logging file (or file.log.curSizeRollBackup or even
+            file.log.yyyy-mm-dd.curSizeRollBackup).
+            </para>
+            <para>
+            This will make time based rollovers with a large number of backups 
+            much faster as the appender it won't have to rename all the backups!
+            </para>
+            </remarks>
+        </member>
+        <member name="T:BJMT.Log.Impl.BJMTRollingFileAppender.RollingMode">
+            <summary>
+            Style of rolling to use
+            </summary>
+            <remarks>
+            <para>
+            Style of rolling to use
+            </para>
+            </remarks>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.RollingMode.Once">
+            <summary>
+            Roll files once per program execution
+            </summary>
+            <remarks>
+            <para>
+            Roll files once per program execution.
+            Well really once each time this appender is
+            configured.
+            </para>
+            <para>
+            Setting this option also sets <c>AppendToFile</c> to
+            <c>false</c> on the <c>RollingFileAppender</c>, otherwise
+            this appender would just be a normal file appender.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.RollingMode.Size">
+            <summary>
+            Roll files based only on the size of the file
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.RollingMode.Date">
+            <summary>
+            Roll files based only on the date
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.RollingMode.Composite">
+            <summary>
+            Roll files based on both the size and date of the file
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.Impl.BJMTRollingFileAppender.RollPoint">
+            <summary>
+            The code assumes that the following 'time' constants are in a increasing sequence.
+            </summary>
+            <remarks>
+            <para>
+            The code assumes that the following 'time' constants are in a increasing sequence.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.RollPoint.InvalidRollPoint">
+            <summary>
+            Roll the log not based on the date
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.RollPoint.TopOfMinute">
+            <summary>
+            Roll the log for each minute
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.RollPoint.TopOfHour">
+            <summary>
+            Roll the log for each hour
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.RollPoint.HalfDay">
+            <summary>
+            Roll the log twice a day (midday and midnight)
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.RollPoint.TopOfDay">
+            <summary>
+            Roll the log each day (midnight)
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.RollPoint.TopOfWeek">
+            <summary>
+            Roll the log each week
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.BJMTRollingFileAppender.RollPoint.TopOfMonth">
+            <summary>
+            Roll the log each month
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.Impl.BJMTRollingFileAppender.IDateTime">
+            <summary>
+            This interface is used to supply Date/Time information to the <see cref="T:BJMT.Log.Impl.BJMTRollingFileAppender"/>.
+            </summary>
+            <remarks>
+            This interface is used to supply Date/Time information to the <see cref="T:BJMT.Log.Impl.BJMTRollingFileAppender"/>.
+            Used primarily to allow test classes to plug themselves in so they can
+            supply test date/times.
+            </remarks>
+        </member>
+        <member name="P:BJMT.Log.Impl.BJMTRollingFileAppender.IDateTime.Now">
+            <summary>
+            Gets the <i>current</i> time.
+            </summary>
+            <value>The <i>current</i> time.</value>
+            <remarks>
+            <para>
+            Gets the <i>current</i> time.
+            </para>
+            </remarks>
+        </member>
+        <member name="T:BJMT.Log.Impl.BJMTRollingFileAppender.LocalDateTime">
+            <summary>
+            Default implementation of <see cref="T:BJMT.Log.Impl.BJMTRollingFileAppender.IDateTime"/> that returns the current time.
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.Impl.BJMTRollingFileAppender.LocalDateTime.Now">
+            <summary>
+            Gets the <b>current</b> time.
+            </summary>
+            <value>The <b>current</b> time.</value>
+            <remarks>
+            <para>
+            Gets the <b>current</b> time.
+            </para>
+            </remarks>
+        </member>
+        <member name="T:BJMT.Log.Impl.BJMTRollingFileAppender.UniversalDateTime">
+            <summary>
+            Implementation of <see cref="T:BJMT.Log.Impl.BJMTRollingFileAppender.IDateTime"/> that returns the current time as the coordinated universal time (UTC).
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.Impl.BJMTRollingFileAppender.UniversalDateTime.Now">
+            <summary>
+            Gets the <b>current</b> time.
+            </summary>
+            <value>The <b>current</b> time.</value>
+            <remarks>
+            <para>
+            Gets the <b>current</b> time.
+            </para>
+            </remarks>
+        </member>
+        <member name="T:BJMT.Log.LogCreatedEventArgs">
+            <summary>
+            一个事件参数类，用于日志产生事件。
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.LogCreatedEventArgs.#ctor">
+            <summary>
+            无参构造函数
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.LogCreatedEventArgs.#ctor(BJMT.Log.LogEntity)">
+            <summary>
+            有参构造函数
+            </summary>
+            <param name="logEntity">日志实体信息</param>
+        </member>
+        <member name="P:BJMT.Log.LogCreatedEventArgs.Entity">
+            <summary>
+            获取事件参数类包装的日志实体
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogCreatedEventArgs.ThreadName">
+            <summary>
+            线程ID
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogCreatedEventArgs.LoggerName">
+            <summary>
+            日志类别
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogCreatedEventArgs.Level">
+            <summary>
+            日志级别
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogCreatedEventArgs.TimeStamp">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogCreatedEventArgs.Content">
+            <summary>
+            日志内容
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.SynchronizeInvokeExtensions">
+            <summary>
+            UI线程同步工具类
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.SynchronizeInvokeExtensions.Invoke(System.ComponentModel.ISynchronizeInvoke,System.Delegate,System.Object[])">
+            <summary>
+            在创建了此对象的线程上同步执行委托并封送对创建线程的调用。
+            </summary>
+            <param name="hwnd">窗口句柄</param>
+            <param name="method">包含要调用的方法的 System.Delegate，在控件的线程上下文中</param>
+            <param name="args">函数参数</param>
+        </member>
+        <member name="M:BJMT.Log.SynchronizeInvokeExtensions.BeginInvoke(System.ComponentModel.ISynchronizeInvoke,System.Delegate,System.Object[])">
+            <summary>
+            在创建了此对象的线程上同步执行委托并封送对创建线程的调用。
+            </summary>
+            <param name="hwnd">窗口句柄</param>
+            <param name="method">包含要调用的方法的 System.Delegate，在控件的线程上下文中</param>
+            <param name="args">函数参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:BJMT.Log.SynchronizeInvokeExtensions.Invoke(System.ComponentModel.ISynchronizeInvoke,System.Action)">
+            <summary>
+            在创建了此对象的线程上同步执行委托并封送对创建线程的调用。
+            </summary>
+            <param name="hwnd">窗口句柄</param>
+            <param name="method">包含要调用的方法的 System.Action，在控件的线程上下文中</param>
+        </member>
+        <member name="M:BJMT.Log.SynchronizeInvokeExtensions.BeginInvoke(System.ComponentModel.ISynchronizeInvoke,System.Action)">
+            <summary>
+            在创建了此对象的线程上同步执行委托并封送对创建线程的调用。
+            </summary>
+            <param name="hwnd">窗口句柄</param>
+            <param name="method">包含要调用的方法的 System.Action，在控件的线程上下文中</param>
+        </member>
+        <member name="M:BJMT.Log.SynchronizeInvokeExtensions.Invoke``1(System.ComponentModel.ISynchronizeInvoke,System.Action{``0},``0)">
+            <summary>
+            在创建了此对象的线程上同步执行委托并封送对创建线程的调用。
+            </summary>
+            <typeparam name="T">参数类型Ｔ</typeparam>
+            <param name="hwnd">窗口句柄</param>
+            <param name="method">包含要调用的方法的 System.Action，在控件的线程上下文中</param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:BJMT.Log.SynchronizeInvokeExtensions.BeginInvoke``1(System.ComponentModel.ISynchronizeInvoke,System.Action{``0},``0)">
+            <summary>
+            在创建了此对象的线程上同步执行委托并封送对创建线程的调用。
+            </summary>
+            <typeparam name="T">参数类型Ｔ</typeparam>
+            <param name="hwnd">窗口句柄</param>
+            <param name="method">包含要调用的方法的 System.Action，在控件的线程上下文中</param>
+            <param name="arg"></param>
+        </member>
+        <member name="M:BJMT.Log.SynchronizeInvokeExtensions.Invoke``2(System.ComponentModel.ISynchronizeInvoke,System.Action{``0,``1},``0,``0)">
+            <summary>
+            在创建了此对象的线程上同步执行委托并封送对创建线程的调用。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <param name="hwnd">窗口句柄</param>
+            <param name="method">包含要调用的方法的 System.Action，在控件的线程上下文中</param>
+            <param name="arg"></param>
+            <param name="arg2"></param>
+        </member>
+        <member name="M:BJMT.Log.SynchronizeInvokeExtensions.BeginInvoke``2(System.ComponentModel.ISynchronizeInvoke,System.Action{``0,``1},``0,``0)">
+            <summary>
+            在创建了此对象的线程上同步执行委托并封送对创建线程的调用。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <param name="hwnd">窗口句柄</param>
+            <param name="method">包含要调用的方法的 System.Action，在控件的线程上下文中</param>
+            <param name="arg"></param>
+            <param name="arg2"></param>
+        </member>
+        <member name="M:BJMT.Log.SynchronizeInvokeExtensions.Invoke``3(System.ComponentModel.ISynchronizeInvoke,System.Action{``0,``1,``2},``0,``0,``2)">
+            <summary>
+            在创建了此对象的线程上同步执行委托并封送对创建线程的调用。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <typeparam name="T3"></typeparam>
+            <param name="hwnd">窗口句柄</param>
+            <param name="method">包含要调用的方法的 System.Action，在控件的线程上下文中</param>
+            <param name="arg"></param>
+            <param name="arg2"></param>
+            <param name="arg3"></param>
+        </member>
+        <member name="M:BJMT.Log.SynchronizeInvokeExtensions.BeginInvoke``3(System.ComponentModel.ISynchronizeInvoke,System.Action{``0,``1,``2},``0,``0,``2)">
+            <summary>
+            在创建了此对象的线程上同步执行委托并封送对创建线程的调用。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <typeparam name="T3"></typeparam>
+            <param name="hwnd">窗口句柄</param>
+            <param name="method">包含要调用的方法的 System.Action，在控件的线程上下文中</param>
+            <param name="arg"></param>
+            <param name="arg2"></param>
+            <param name="arg3"></param>
+        </member>
+        <member name="M:BJMT.Log.SynchronizeInvokeExtensions.Invoke``4(System.ComponentModel.ISynchronizeInvoke,System.Action{``0,``1,``2,``3},``0,``0,``2,``3)">
+            <summary>
+            在创建了此对象的线程上同步执行委托并封送对创建线程的调用。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <typeparam name="T3"></typeparam>
+            <typeparam name="T4"></typeparam>
+            <param name="hwnd">窗口句柄</param>
+            <param name="method">包含要调用的方法的 System.Action，在控件的线程上下文中</param>
+            <param name="arg"></param>
+            <param name="arg2"></param>
+            <param name="arg3"></param>
+            <param name="arg4"></param>
+        </member>
+        <member name="M:BJMT.Log.SynchronizeInvokeExtensions.BeginInvoke``4(System.ComponentModel.ISynchronizeInvoke,System.Action{``0,``1,``2,``3},``0,``0,``2,``3)">
+            <summary>
+            在创建了此对象的线程上同步执行委托并封送对创建线程的调用。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <typeparam name="T3"></typeparam>
+            <typeparam name="T4"></typeparam>
+            <param name="hwnd">窗口句柄</param>
+            <param name="method">包含要调用的方法的 System.Action，在控件的线程上下文中</param>
+            <param name="arg"></param>
+            <param name="arg2"></param>
+            <param name="arg3"></param>
+            <param name="arg4"></param>
+        </member>
+        <member name="T:BJMT.Log.LogLevel">
+            <summary>
+            日志级别
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.LogLevel.Debug">
+            <summary>
+            Debug
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.LogLevel.Information">
+            <summary>
+            Information
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.LogLevel.Warning">
+            <summary>
+            Warning
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.LogLevel.Error">
+            <summary>
+            Error
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.LogLevel.Fatal">
+            <summary>
+            Fatal
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.Impl.ExpiredLogFileDetector">
+            <summary>
+            过期日志检测类
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.ExpiredLogFileDetector._logPaths">
+            <summary>
+            日志路径
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.ExpiredLogFileDetector._expiredDays">
+            <summary>
+            日志文件的过期天数
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Impl.ExpiredLogFileDetector._fileExpiredDetectTimer">
+            <summary>
+            一个计时器，用于检测日志文件是否过期(过期后删除)。
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Impl.ExpiredLogFileDetector.#ctor(System.Collections.Generic.IEnumerable{System.String},System.UInt16)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="logPath"></param>
+            <param name="expiredDays"></param>
+        </member>
+        <member name="M:BJMT.Log.Impl.ExpiredLogFileDetector.StartLogFileDetectionTimer">
+            <summary>
+            启动日志文件检查计时器
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Impl.ExpiredLogFileDetector._dectectTimer_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            文件检测计时器超时
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BJMT.Log.Impl.ExpiredLogFileDetector.Close">
+            <summary>
+            关闭
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Impl.ExpiredLogFileDetector.SetExpiredDay(System.UInt16)">
+            <summary>
+            设置所有日志文件的保存天数为指定的值。
+            </summary>
+            <param name="value">过期天数</param>
+        </member>
+        <member name="M:BJMT.Log.Impl.ExpiredLogFileDetector.GetExpiredDay">
+            <summary>
+            获取指定日志的过期天数
+            </summary>
+            <returns>过期天数</returns>
+        </member>
+        <member name="M:BJMT.Log.Impl.ExpiredLogFileDetector.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.Presentation.LogControlMultiPages">
+            <summary>
+            多标签页风格的日志显示控件。
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Presentation.LogControlMultiPages.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Presentation.LogControlMultiPages.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:BJMT.Log.Presentation.LogControlMultiPages.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Presentation.LogControlMultiPages._debugLogAlived">
+            <summary>
+            是否实时显示调试信息
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Presentation.LogControlMultiPages._logCache">
+            <summary>
+            日志缓存
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Presentation.LogControlMultiPages.#ctor">
+            <summary>
+            构造函数。
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Presentation.LogControlMultiPages.ShowLog(System.Collections.Generic.IEnumerable{BJMT.Log.LogEntity})">
+            <summary>
+            在控件上显示日志实体信息
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.Presentation.LogControlMultiPages.DebugLogAlived">
+            <summary>
+            获取/设置一个值，用于表示是否实时显示调试信息。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.Presentation.LogControlMultiPages.ContextMenuItems">
+            <summary>
+            获取日志控件上下文菜单的所有项
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.Presentation.Controls.ListViewEx">
+            <summary>
+            启用双缓冲的ListView
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Presentation.Controls.ListViewEx.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.Presentation.LogMonitorControl">
+            <summary>
+            一个简易的日志监视控件
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Presentation.LogMonitorControl._debugLogAlived">
+            <summary>
+            是否实时显示调试信息
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Presentation.LogMonitorControl._logCache">
+            <summary>
+            日志缓存
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Presentation.LogMonitorControl.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Presentation.LogMonitorControl.ShowLog(System.Collections.Generic.IEnumerable{BJMT.Log.LogEntity})">
+            <summary>
+            在控件上显示日志实体信息
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.Presentation.LogMonitorControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.Presentation.LogMonitorControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:BJMT.Log.Presentation.LogMonitorControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.Presentation.LogMonitorControl.DebugLogAlived">
+            <summary>
+            获取/设置一个值，用于表示是否实时显示调试信息。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.Presentation.LogMonitorControl.ContextMenuItems">
+            <summary>
+            获取日志控件上下文菜单的所有项
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.LogManager">
+            <summary>
+            日志管理器
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.LogManager.CurrentLogManager">
+            <summary>
+            当前的日志管理接口
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.LogManager._logCreatedHandlers">
+            <summary>
+            日志创建事件处理句柄集合。
+            </summary>
+        </member>
+        <member name="F:BJMT.Log.LogManager._expiredLogFileDetector">
+            <summary>
+            检测器
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.LogManager.SetLogManager(BJMT.Log.ILogManager)">
+            <summary>
+            设置日志管理器
+            </summary>
+            <param name="logManager">将要设置的日志管理器</param>
+        </member>
+        <member name="M:BJMT.Log.LogManager.Initialize(System.String,System.UInt16)">
+            <summary>
+            初始化
+            </summary>
+            <param name="logCfgFilePathName">日志的配置文件路径名称</param>
+            <param name="expiredDays">日志文件的有效天数</param>
+        </member>
+        <member name="M:BJMT.Log.LogManager.GetLogger(System.String)">
+            <summary>
+            得到一个日志记录器接口
+            </summary>
+            <param name="name">记录器的名称</param>
+            <returns>一个日志记录器接口</returns>
+        </member>
+        <member name="M:BJMT.Log.LogManager.GetCurrentLoggers">
+            <summary>
+            获取当前定义的所有日志接口
+            </summary>
+            <returns>所有日志接口</returns>
+        </member>
+        <member name="M:BJMT.Log.LogManager.Flush">
+            <summary>
+            清理当前缓冲区，使所有日志数据写入基础设备。
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.LogManager.ActivateOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BJMT.Log.LogManager.Shutdown">
+            <summary>
+            关闭日志管理器
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogManager.FileHeader">
+            <summary>
+            获取/设置日志文件的头部。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogManager.FileFooter">
+            <summary>
+            获取/设置日志文件的尾部。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogManager.FileNamePrefix">
+            <summary>
+            获取/设置日志文件名称的前缀。默认值为null。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogManager.FileNameSurfix">
+            <summary>
+            获取/设置日志文件名称的后缀。默认值为null。
+            </summary>
+        </member>
+        <member name="P:BJMT.Log.LogManager.Current">
+            <summary>
+            获取当前的日志管理接口
+            </summary>
+        </member>
+        <member name="E:BJMT.Log.LogManager.LogCreated">
+            <summary>
+            一个事件，当日志被创建时引发。
+            </summary>
+        </member>
+        <member name="T:BJMT.Log.Impl.BJMTLogger">
+            <summary>
+            ATS日志类
+            </summary>
+        </member>
+    </members>
+</doc>
